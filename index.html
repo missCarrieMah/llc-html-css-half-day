@@ -615,81 +615,106 @@ These file naming tips can be applied to any files such as images, folders, CSS,
         </div>
       </script>
     </section>
-
-    
     <section class="slide" data-markdown>
       <script type="text/template">
-        ## Links / Anchor tag
+        ##Exercise #5: Add social media/contact list (10mins)
 
-        Links (hyperlinks) are represented by the anchor (`<a>`) tag. An `attribute` is required to provide more information, in the case, the `href` attribute, to specify the link location.
+        Add a list of links to your social media accounts and/email.  We can use an unordered list since the order doesn&#39;t matter.
 
-        #####Link to an external site
+        Be sure to nest the links (`<a>`) *inside* of the list item (`<li>`) as well. For emails, see the example below.  Note that the `href` value is different.  This syntax will automatically open the users email client when they click on the link.
 
-        ```xml
-        <a href="http://ladieslearningcode.com">Ladies Learning Code</a>
+        Example:
         ```
-
-        #####Link to other HTML pages
-
-        ```xml
-        <a href="about.html">About page</a>
+        <ul>
+          <li><a href="mailto:me@email.com">me@email.com</a></li>
+          <li><a href="https://twitter.com">Twitter</a></li>
+        </ul>
         ```
+        Your page should look something like this:
 
-        #####Link to a specific spot on a page
+        ![](framework/img/workshop/exercise-5.png)
 
-        Add an `id` attribute to the tag where you would like the link to go to. In the `href` attribute value, use the `#` symbol followed by the id name, with no spaces.
-
-        ```xml
-        <a href="#linkSpot">Click this link to navigate to a spot on the page</a>
-        ```
-        ```xml
-        <h2 id="linkSpot">This where you want the link to go TO.</h2>
-        ```
+        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex2.html](project/examples/index-ex5.html)
       </script>
     </section>
 
-
-    <section class="slide" data-markdown>
+    <section class="slide title" data-markdown>
       <script type="text/template">
+        #Time for CSS!
       </script>
     </section>
 
-
     <section class="slide" data-markdown>
       <script type="text/template">
-      </script>
-    </section>
+          ##CSS overview
 
+          CSS is a stylesheet language with its own syntax rules. It separates content from presentation. A style sheet contains a list of style rules.
+
+          **Selectors:** used to determine which HTML element(s) to apply the styles to.  
+          **Declarations:** style rules, written using `property: value` pairs, are wrapped by curly brackets `{}` and each must end with a semi-colon (;) to indicate that the instruction is complete.
+
+          ```css
+          selector {
+            property: value;
+          }
+          ```
+
+          **Properties** determine the type of style to be applied to the element (e.g. color). Values are specific to the property (red). The following example below changes the font colour of all paragraphs to red.
+
+          ```css
+          p {
+            color: red;
+          }
+          ```   
+      </script>
+    </section> 
 
     <section class="slide" data-markdown>
-      <script type="text/template">
-      </script>
-    </section>
+       <script type="text/template">
+          ##Referencing CSS
 
+          There are three ways to include (a.k.a *reference*) CSS in an HTML page. Today we&#39;ll be using the recommended **external** method. This method links to a separate style sheet file (uses a `.css` file extension) to separate the CSS from the HTML document.
 
+          The style sheet is referenced in the `<head>` of the document with a `<link>` tag and two **attributes**, `rel` (relationship) and `href`. The value of `href` points to the file location of the style sheet. 
 
-    
+          Though it is not required, css files are often saved in a separate css folder for organization, so make sure the file path points to the appropriate directory.
 
-    <section class="slide" data-markdown>
-## Exercise #1 - Adding content (10 mins)
+          ```
+          <head>
+              <title>Page Title</title>
+              <link rel="stylesheet" href="css/style.css">
+          </head>
+          ```
+          <br>
+          If you're curious, you can read more about the inline and internal referencing methods below:
 
-In the Sublime Text editor:
+          **INLINE**: Can be added to any HTML element using the `style` *attribute*.
 
-1. Update the `&lt;title>&lt;/title>`
-1. Add your name in the `h1` tag if you haven’t already.
-1. Add your tag line under your name using the appropriate heading tag.
-1. Change the content in the `title` tag. Where do you see this change?
-1. Add a copyright message using a paragraph (`p`) tag _inside_ of the `footer` tag.
+          ```
+          <p style="color:blue;">I'm writing CSS!</p>
+          ```
 
-**Bonus:** Try using an HTML code for the copyright _symbol_. Here are some resources: 
+          This technique is not as common because it's harder to maintain but it's good to know how it works, just in case.
 
-[http://character-code.com/ascii-table.php](http://character-code.com/ascii-table.php) 
-[http://unicode-table.com/en/#00A9](http://unicode-table.com/en/#00A9)
+          **INTERNAL**: Uses `<style>` and is included in the `<head>` element.
 
-Don’t forget to save and refresh your browser after each change!
+          ```    
+          <head>
+              <title>Page Title</title>
+              <style>
+                  h1 {
+                      font-size: 16px;
+                  }
+              </style>
+          </head>
+          <body>
+              <p>paragraph</p>
+          </body>
+          ```
 
-Your page should now look similar to [exercise1.html](project/examples/exercise1.html)
-    </section>
+          This method is preferred over *inline* css, however it is still inefficient because if you had multiple web pages, the style block and any revisions would have to be replicated on every single page.
+       </script>
+     </section> 
 
     <section class="slide" data-markdown>
       ##Getting your site online
@@ -707,7 +732,7 @@ Your page should now look similar to [exercise1.html](project/examples/exercise1
       * Username
       * Password
 
-      Here's a nice tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)
+      Here&#39;s a nice tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)
 
       Feeling adventurous? Try [Hosting Static Sites on Github for Beginners](http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/).
     </section>
@@ -729,7 +754,7 @@ Your page should now look similar to [exercise1.html](project/examples/exercise1
         <li><i class="fa fa-twitter"></i><a href="http://twitter.com/">@twitter</a></li>
       </ul>
 
-      <p class="attribution">Slide presentation created with <a href="https://github.com/LeaVerou/csss">Lea Verou's CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+      <p class="attribution">Slide presentation created with <a href="https://github.com/LeaVerou/csss">Lea Verou&#39;s CSS-based SlideShow System</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
     </section>
 
   </main><!-- cls main section -->
