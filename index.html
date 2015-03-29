@@ -112,7 +112,7 @@ There are many free and paid [options](http://en.wikipedia.org/wiki/List_of_HTML
 Improve your work flow with keyboard shortcuts. [Link to shortcut cheatsheet] TODO
     </section>
     
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       <script type="text/template">
         ##Anatomy of a Web Page
 
@@ -123,9 +123,9 @@ Improve your work flow with keyboard shortcuts. [Link to shortcut cheatsheet] TO
         **JavaScript** is a programming language. This is usually used to defines the behaviour and interactions. (e.g. when the user scrolls down the page, do something)
 
         <br>
-        ###HTML + CSS + JavaScript = Front-end / Client-side<!-- .element: class="centered" -->
+        ###HTML + CSS + JavaScript = Front-end / Client-side
       </script>
-    </section>
+    </section> -->
 
     <section class="slide title" data-markdown>
       #HTML
@@ -211,7 +211,7 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
         <!DOCTYPE html>
         <html lang="en">
           <head>
-            <title>hiPage Title</title>
+            <title>Page Title</title>
           </head>
           <body>
             All page content goes here!
@@ -223,31 +223,6 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
         **&lt;head>** - Contains info about the current page (more on this later). `<title>` must be included and defines the page title, which is then displayed in the browser toolbar, bookmarks and search engine results.
 
         **&lt;body>** - All content to be displayed in the browser window, also known as the viewport, goes here.
-      </script>
-    </section>
-    <section class="slide" data-markdown>
-      <script type="text/template">
-      ##Metadata
-
-      `<meta>` tags are optional but can provide additional info about the HTML document, using different attributes. The `charset` attribute helps the browser translate computer language (bytes) into characters & symbols and is strongly recommended. Adding a description is also useful for search engine results. 
-
-      Note that the `<meta>` tag does not require a closing tag.
-
-      ```xml
-      <!DOCTYPE html>
-      <html lang="en">
-        <head>
-          <title>Page Title</title>
-          <meta charset="utf-8">
-          <meta name="Description" content="Short description about your page">
-        </head>
-        <body>
-          All page content goes here!
-        </body>
-      </html>
-      ```
-
-      More info about meta tags<!-- .element: class="footnote" --> [here](https://support.google.com/webmasters/answer/79812?hl=en).
       </script>
     </section>
 
@@ -280,7 +255,7 @@ With the entire folder selected, select **Open**. The folder will appear in the 
 
         1. In Sublime, select **File > New File** to create a new file.
         1. Select **File > Save** to save & name your file.  Name it **index.html** and save it in the **project** folder.
-        1. Let's add all of the basic HTML tags (hint: [Slide 12](index.html#slide12)) and save your changes.
+        1. Let's add all of the basic HTML tags (hint: [Slide 10](index.html#slide10)) and save your changes.
         1. Right click or two-finger tap in Sublime and select **Open in Browser** to open the HTML file in your *default* browser. 
 
         If Chrome is not your default browser, go to your Window/Finder and navigate to the<!-- .element: class="footnote" --> **project** folder, right-click/two-finger tap on **index.html** and choose **Open With > Chrome**
@@ -670,52 +645,258 @@ These file naming tips can be applied to any files such as images, folders, CSS,
     </section> 
 
     <section class="slide" data-markdown>
-       <script type="text/template">
-          ##Referencing CSS
+      <script type="text/template">
+        ##Referencing CSS
 
-          There are three ways to include (a.k.a *reference*) CSS in an HTML page. Today we&#39;ll be using the recommended **external** method. This method links to a separate style sheet file (uses a `.css` file extension) to separate the CSS from the HTML document.
+        There are three ways to include (a.k.a *reference*) CSS in an HTML page. Today we&#39;ll be using the recommended **external** method. This method links to a separate style sheet file (uses a `.css` file extension) to separate the CSS from the HTML document.
 
-          The style sheet is referenced in the `<head>` of the document with a `<link>` tag and two **attributes**, `rel` (relationship) and `href`. The value of `href` points to the file location of the style sheet. 
+        The style sheet is referenced in the `<head>` of the document with a `<link>` tag and two **attributes**, `rel` (relationship) and `href`. The value of `href` points to the file location of the style sheet. 
 
-          Though it is not required, css files are often saved in a separate css folder for organization, so make sure the file path points to the appropriate directory.
+        Though it is not required, css files are often saved in a separate css folder for organization, so make sure the file path points to the appropriate directory.
 
-          ```
-          <head>
-              <title>Page Title</title>
-              <link rel="stylesheet" href="css/style.css">
-          </head>
-          ```
-          <br>
-          If you're curious, you can read more about the inline and internal referencing methods below:
+        ```
+        <head>
+            <title>Page Title</title>
+            <link rel="stylesheet" href="css/style.css">
+        </head>
+        ```
+        <br>
+        If you're curious, you can read more about the inline and internal referencing methods below:
 
-          **INLINE**: Can be added to any HTML element using the `style` *attribute*.
+        **INLINE**: Can be added to any HTML element using the `style` *attribute*.
 
-          ```
-          <p style="color:blue;">I'm writing CSS!</p>
-          ```
+        ```
+        <p style="color:blue;">I'm writing CSS!</p>
+        ```
 
-          This technique is not as common because it's harder to maintain but it's good to know how it works, just in case.
+        This technique is not as common because it's harder to maintain but it's good to know how it works, just in case.
 
-          **INTERNAL**: Uses `<style>` and is included in the `<head>` element.
+        **INTERNAL**: Uses `<style>` and is included in the `<head>` element.
 
-          ```    
-          <head>
-              <title>Page Title</title>
-              <style>
-                  h1 {
-                      font-size: 16px;
-                  }
-              </style>
-          </head>
-          <body>
-              <p>paragraph</p>
-          </body>
-          ```
+        ```    
+        <head>
+            <title>Page Title</title>
+            <style>
+                h1 {
+                    font-size: 16px;
+                }
+            </style>
+        </head>
+        <body>
+            <p>paragraph</p>
+        </body>
+        ```
 
-          This method is preferred over *inline* css, however it is still inefficient because if you had multiple web pages, the style block and any revisions would have to be replicated on every single page.
-       </script>
-     </section> 
+        This method is preferred over *inline* css, however it is still inefficient because if you had multiple web pages, the style block and any revisions would have to be replicated on every single page.
+      </script>
+    </section> 
 
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #6: Create a CSS File
+
+        Back in Sublime Text, create a new CSS file by selecting **File > New File** or use a [keyboard shortcut](shortcuts-cheatsheet.html). Name the file with a **.css** extension. Let&#39;s call it **styles.css** and add it to **index.html**.
+
+        PRO TIP! Sublime Text has a shortcut.  Type "link" with no brackets, then the tab key. Voila!<!-- .element: class="footnote" -->
+
+        ```
+        <link rel="stylesheet" href="css/styles.css">
+        ```
+
+        Let&#39;s do a quick test to see if it is linked properly by adding a background color on the entire viewport.
+
+        ```
+        body {
+          background: lightblue;
+        }
+        ```
+        </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Background images
+
+        The `background` property can be used to add colours or background images. There are already a few to choose from in your project images folder.
+
+        There are two ways to declare the `background` property. The value must inclue the file path to the the image file.
+
+        ```css
+        /* shorthand - this is a CSS comment by the way!*/
+        background: url(path/to/image/file);
+        ```
+        ```css
+        /* longhand */
+        background-image: url(path/to/image/file);
+        ```
+
+        **Important:** Note the location of the CSS file.  Since it&#39;s inside of a folder, we need to adjust the file path to reflect that using `../` to indicate that the directory needs to move *up* and *out* of the containing folder.
+
+        ```css
+        background: url(../path/to/image/file);
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #7
+
+        Add a background image to the `<header>` section. There are a few options in the images folder in your projects to choose from for now.
+
+        ```
+        header {
+          background: url(../images/baltimore-rowhouses.jpg);
+        }
+        ```
+        <div class="delayed">
+          <p>Hey! How come you can only see a sliver of the image?</p>
+
+          ![](framework/img/workshop/exercise-7.png)
+        </div>
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Default HTML styles
+        
+        HTML comes with default styles such as different heading sizes, font weights and font sizes. HTML also has default spacing on many of its elements as well.  Notice how there&#39;s a space between the paragraphs and headings too? We can change all of this with CSS.
+
+        The browser looks at every HTML element on the page as a rectangular box. The CSS **Box Model** describes the way CSS styles the size and spacing of HTML elements.
+
+        There are some funny quirks with the box model sizing.  In short, adding the CSS snippet below to your CSS file will fix those quirks. See more about The Box Model [here](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
+
+        ```
+        /* apply a natural box layout model to all elements, but allowing components to change */
+        html {
+          box-sizing: border-box;
+        }
+        *, *:before, *:after {
+          box-sizing: inherit;
+        }
+        ```
+        </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Margin and Padding
+        `margin` - adds/removes space **outside** of the element  
+        `padding` - adds/removes space **inside** of the element  
+
+        The values for both properties can be declared using 1 to 4 values. A variety of measurement units can be used but today we will use pixels. Setting the value to "0" will *remove* any default space and any positive value will *add* space.
+
+        ```css
+        padding: 2px 10px 2px 10px; /* top, right, bottom, left */
+        padding: 2px 10px 2px; /* top, right & left, bottom */
+        padding: 2px 10px; /* top & bottom, right and left */
+        padding: 2px /* all sides have the same value */
+        ```
+
+        Both margin and padding can also be used by targeting a specific side.
+
+        ```css
+        margin-top: 2px;
+        margin-right: 2px;
+        margin-bottom: 2px;
+        margin-left: 2px;
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Practice!
+
+        Practice changing the margin and padding example below with 1 to 4 values.
+
+        <textarea class="snippet" data-subject="#test">background: lightblue;
+padding: 0px;
+margin: 0px;</textarea>
+        <div id="test" class="example">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt sint beatae dolor dolorum aliquid quis explicabo vitae numquam, quas illo dolore molestiae ratione, perferendis, deleniti nemo ea voluptatibus! Quibusdam.</p>
+        </div>
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #8: Update the page spacing
+
+        Notice that the content doesn&#39;t quite go to the edge of the page? That&#39;s because there&#39;s default spacing in the `body` element (as well as many other elements). 
+
+        Remove the test background color and replace it with `padding` and `margin` to reset the value.
+
+        ```
+        body {
+          padding: 0;
+          margin: 0;
+        }
+        ```
+        Also, let&#39;s start adding some padding to the header (space inside) and center align the text.
+
+        ```
+        header {
+          background: url(../images/baltimore-rowhouses.jpg);
+          text-align: center;
+          padding: 150px 0;
+        }
+        ```
+        You can adjust this padding value later when we change font sizes.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          ##Break Time! (10 mins)
+
+          ###Optional exercises
+
+          1. Find your own image to use as the header background.  Here&#39;s a resource for a list of free stock photography sites:
+            https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b
+
+          1. Find two fonts to use in your project.  Two different fonts are recommended.  The LLC project example uses [Roboto](http://www.google.com/fonts/specimen/Roboto) and [Satisfy](http://www.google.com/fonts/specimen/Satisfy). 
+
+          Today we&#39;ll be using a free service provided by Google Fonts: http://www.google.com/fonts
+      </script>
+    </section>  
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        There are many other background options such as:
+
+        background-size
+        background-position
+        background-attachement
+        many more!
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      ##Metadata
+
+      `<meta>` tags are optional but can provide additional info about the HTML document, using different attributes. The `charset` attribute helps the browser translate computer language (bytes) into characters & symbols and is strongly recommended. Adding a description is also useful for search engine results. 
+
+      Note that the `<meta>` tag does not require a closing tag.
+
+      ```xml
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <title>Page Title</title>
+          <meta charset="utf-8">
+          <meta name="Description" content="Short description about your page">
+        </head>
+        <body>
+          All page content goes here!
+        </body>
+      </html>
+      ```
+
+      More info about meta tags<!-- .element: class="footnote" --> [here](https://support.google.com/webmasters/answer/79812?hl=en).
+      </script>
+    </section>
     <section class="slide" data-markdown>
       ##Getting your site online
 
