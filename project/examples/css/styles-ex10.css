@@ -19,25 +19,6 @@ h1 {
   font-size: 50px;
   font-family: 'Satisfy', cursive;
 }
-a {
-  color: #8c9d87;
-}
-
-
-/* SHARED STYLES 
------------------*/
-.content-wrap {
-  width: 800px;
-  margin: 0 auto;
-  padding: 100px 0;
-}
-nav,
-.about, 
-footer {
-  background: #111;
-  color: #efefef;
-}
-
 
 /* HEADER 
 -----------------*/

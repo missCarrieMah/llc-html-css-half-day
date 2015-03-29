@@ -997,16 +997,17 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #9: Typography
+        ##Class Exercise #10: Typography
 
         Services like [Google Fonts](http://www.google.com/fonts) make it easier to add variety to your font choices. Google Fonts allows you to link directly to their hosted stylesheet and fonts making it available to all users that visit your site.
 
-        1. Select the fonts you want to use and **Add to Collection**.
+        1. Select the fonts you want to use and **Add to Collection**.<br>
+          <span class="footnote">(The LLC project uses Roboto and Satisfy. Some other good ones are Open Sans and Pacifico.)</span>
         1. You can **Review** them to take a closer look, then choose **Use** when ready.
         1. Select font weights. The more you choose, the more it will slow down page load time.
         The default character set should contain what you need. Only select an option if you need to add additional language support.
-        1. Grab the <link> code snippet and add it the <head> part of your page.
-        1. Use the new fonts with the font-family property as listed in the example on the Google Fonts page.
+        1. Copy the `<link>` code snippet and add it the `<head>` of your page to reference the Google Font CSS.
+        1. Use the new fonts with the `font-family` property as listed in the example on the Google Fonts page.
         
         That&#39;s it!
       </script>
@@ -1014,9 +1015,9 @@ text-transform: lowercase;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Class Exercise #9: Typography (continued)
+          ##Class Exercise #10: Typography (continued)
 
-          Make sure the Google Font stylesheet has been added to your HTML page to use the fonts on website. 
+          (Make sure the Google Font stylesheet has been added to your HTML page to use the fonts on website.)<!-- .element: class="footnote" --> 
 
           Let&#39;s add the base font to the `body` element, so all the descendant elements can inherit this style.  You can change the `font-weight` too.
 
@@ -1040,7 +1041,7 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Class Exercise #9: Typography (continued)
+          ##Class Exercise #10: Typography (continued)
 
           What if you want the `h1` in the `header` to look different than all the other `h1` tags? You can use a **descendant selector** to specifically select a tag within another tag.
 
@@ -1057,13 +1058,12 @@ text-transform: lowercase;</textarea>
           }
           header h1 { 
             font-size: 150px;
-            color: black;
           }
           ```
 
           `header h1` is more specific so it will override the `font-size` in the `h1` declaration.
 
-          Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex9.html](project/examples/index-ex9.html) and [project/examples/css/styles-ex9.css](project/examples/css/styles-ex9.css)
+          Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex10.html](project/examples/index-ex10.html) and [project/examples/css/styles-ex10.css](project/examples/css/styles-ex10.css)
       </script>
     </section>
 
@@ -1094,7 +1094,7 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         ##Class & ID attributes
         
-        When **type selectors** are too general (targeting the HTML element), HTML gives us two ways to attach extra identifying information to target specific elements with two **attributes**, `class` (can be used multiple times) and `id` (can only be used once per page).  
+        HTML gives us two ways to attach extra identifying information to target specific elements with two **attributes**, `class` (can be used multiple times) and `id` (can only be used once per page).  
 
         ```xml   
         <p>Regular text.</p>
@@ -1166,16 +1166,17 @@ height: 100px;</textarea>
         ```
 
         <textarea class="snippet" data-subject="#wrapper-test">.about {
-          background: lightgreen;
+          background: lightblue;
         }
         .content-wrap { 
           background: gray;
           width: ;
           margin: ;
+          padding: ;
         }</textarea>
 
         <div id="wrapper-test" class="example" style="padding:0;">
-          <section>
+          <section class="about">
             <div class="content-wrap">
               content to be aligned goes here
             </div>
@@ -1186,11 +1187,16 @@ height: 100px;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Exericise #10 - Aligning Content (10mins)
-          add content-wrap
-          About, Extras, Contact/Footer
+          ##Class Exericise #11 - Aligning Content
+          
+          1. Add the **content-wrap** `<div>` to the About, Extras and Footer section, like in the previous example.  
+          <span class="footnote">(Add it to the header if you want it to be the same width as the content but since it only contains your name and it&#39;s centered aligned, you might not need to.)</span>
 
-          add bg color to about and footer
+          1. Add the `.content-wrap` styles to styles.css (`width`, `margin`, `padding`)
+          1. Add a background colour to the Nav, About and Contact/Footer (the LLC project uses #111111) and change the font color (if needed).
+
+            How come the font color for the links didn't change? <!-- .element: class="delayed" -->
+          1. Change the font colour for the links (the LLC project uses #8c9d87) <!-- .element: class="delayed" -->
       </script>
     </section>
 
@@ -1209,6 +1215,24 @@ height: 100px;</textarea>
         More about dev tools:<!-- .element: class="footnote" --> http://discover-devtools.codeschool.com <br>
         To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en).<br>
         Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          ##Nav styling
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          ##Create a logo
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          ##Positioning
       </script>
     </section>
 
