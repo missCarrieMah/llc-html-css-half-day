@@ -844,9 +844,7 @@ margin: 0px;</textarea>
       <script type="text/template">
         ##Class Exercise #8: Update the page spacing
 
-        Notice that the content doesn&#39;t quite go to the edge of the page? That&#39;s because there&#39;s default spacing in the `body` element (as well as many other elements). 
-
-        Remove the test background color and replace it with `padding` and `margin` to reset the value.
+        Notice that the content doesn&#39;t quite go to the edge of the page? That&#39;s because there&#39;s default spacing in the `body` element (as well as many other elements). Remove the test background color and replace it with `padding` and `margin` to reset the value. Save and check the changes in the browser.
 
         ```
         body {
@@ -854,7 +852,7 @@ margin: 0px;</textarea>
           margin: 0;
         }
         ```
-        Also, let&#39;s start adding some padding to the header (space inside) and center align the text.
+        Also, add some padding to the header and center align the text. You can adjust this padding value later when we change font sizes.
 
         ```
         header {
@@ -863,13 +861,15 @@ margin: 0px;</textarea>
           padding: 150px 0;
         }
         ```
-        You can adjust this padding value later when we change font sizes.
+        
+
+        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex8.html](project/examples/index-ex8.html) and [project/examples/css/styles-ex8.css](project/examples/css/styles-ex8.css)
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Background Images, Part 2
+        ##Class Exercise #9: Background Images, Part 2
 
         If the image is smaller than the width of your browser window, the image will repeat by default.
 
@@ -906,22 +906,23 @@ margin: 0px;</textarea>
           
           Image source and further reading<!-- .element: class="footnote" --> [here](http://www.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/).
 
-          ![](framework/img/workshop/graphical-z-index.gif)<!-- .element: class="col-2" -->
+          ![](framework/img/workshop/graphical-z-index.gif)<!-- .element: class="col-narrow" -->
 
-          <div class="col-2 delayed">
-          If a background image is added to `body`, it will appear behind the header.  Let&#39;s add it!  
-          In your images folder, there are a series of pattern tile images.  Use those or any other image to test this effect.
+          <div class="col-wide delayed">
+            If a background image is added to `body`, it will appear behind the header.  Let&#39;s add it!
 
           <pre>
+
           ```
           body {
-            background: url(../images/8.jpg) fixed;
+            background: url(../images/6.jpg) no-repeat fixed;
+            background-size: cover;
           }
           ```
           </pre>
-
-          <span class="footnote">no-repeat is not needed because we want the pattern tile image to repeat and cover the entire area.</span>
           </div>
+
+          Your page probably doesn't look too polished just yet, but remember this is a step by step process and learning how to make changes means you can change it however you'd like!<!-- .element: class="delayed" -->
           
       </script>
     </section>
@@ -932,7 +933,7 @@ margin: 0px;</textarea>
 
           ###Optional exercises
 
-          1. Double check your code.  You can check your code against [project/examples/index-ex8.html](project/examples/index-ex8.html) and [project/examples/css/styles-ex8.css](project/examples/css/styles-ex8.css)
+          1. Double check your code.  You can check your code against [project/examples/index-ex9.html](project/examples/index-ex9.html) and [project/examples/css/styles-ex9.css](project/examples/css/styles-ex9.css)
 
           1. Find your own image to use as the header background.  Here&#39;s a resource for a list of free stock photography sites:
             https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b
