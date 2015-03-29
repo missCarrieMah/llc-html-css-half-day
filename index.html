@@ -84,32 +84,16 @@
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Getting Started: Web Browser 
+        ##Getting Started
 
-        Choose a modern web browser, like **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)**, that supports current web standards and has good development tools.
-
-        You can view the source of any web page by right-clicking (or two-finger tap) on *any* web page! Let's go to http://ladieslearningcode.com and view the source. That's HTML.
-
-        **Chrome Developer tools** take it a step further and allows us to *inspect* any web page making it easier to test and debug code. The tools can be accessed in 3 ways:
-
-        * right-click / two-finger tap on a web page and select **Inspect Element**
-        * select the menu icon ![](framework/img/workshop/menu-icon-chrome.png) in the top right hand corner and select **Tools > Developer Tools**
-        * keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
-
-        More about dev tools:<!-- .element: class="footnote" --> http://discover-devtools.codeschool.com <br>
-        To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en).<br>
-        Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-##Getting Started: Text editor
+        Choose a modern web browser, like [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/), that supports current web standards and has good development tools.
 
 You can write code using your computer's default text editor, Notepad (Windows) or TextEdit (Apple), but choosing a text editor with colour highlighting and other helpful features will improve your work flow.
 
 There are many free and paid [options](http://en.wikipedia.org/wiki/List_of_HTML_editors). Today, we're going to use [Sublime Text](http://www.sublimetext.com/). 
 
 Improve your work flow with keyboard shortcuts. [Link to shortcut cheatsheet] TODO
+      </script>
     </section>
     
     <!-- <section class="slide" data-markdown>
@@ -128,11 +112,13 @@ Improve your work flow with keyboard shortcuts. [Link to shortcut cheatsheet] TO
     </section> -->
 
     <section class="slide title" data-markdown>
-      #HTML
-      ##The content layer
+      <script type="text/template">
+        #HTML: HyperText<br>Markup Language
+        ##The content layer
+      </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       ##HTML / XHTML / HTML5
 
 What's the difference?
@@ -146,7 +132,7 @@ What's the difference?
 Basically, these three terms refer to different versions of the same language but are often just called HTML interchangeably.
 
 The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these web standards with specifications, guidelines, tools and recommendations.
-    </section>
+    </section> -->
 
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -192,9 +178,9 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
           
         **DOCTYPE** - This is always the first line because it tells the browser what version of HTML the document is written in. Can be written in lowercase or uppercase. 
 
-        `<!DOCTYPE html>` is the doctype for HTML5.
+        `<!DOCTYPE html>` is the doctype for HTML5 (the latest version of HTML).
 
-        Remember that XHTML is just an older version of HTML? Here&#39;s what the DOCTYPE looks like for XHTML:
+        Here's what the previous version (XHTML) looks like.  HTML5 is much neater!
 
         ```
         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -255,16 +241,18 @@ With the entire folder selected, select **Open**. The folder will appear in the 
 
         1. In Sublime, select **File > New File** to create a new file.
         1. Select **File > Save** to save & name your file.  Name it **index.html** and save it in the **project** folder.
-        1. Let's add all of the basic HTML tags (hint: [Slide 10](index.html#slide10)) and save your changes.
+        1. Let's add all of the basic HTML tags (hint: [Slide 9](index.html#slide9)) and save your changes.
         1. Right click or two-finger tap in Sublime and select **Open in Browser** to open the HTML file in your *default* browser. 
 
         If Chrome is not your default browser, go to your Window/Finder and navigate to the<!-- .element: class="footnote" --> **project** folder, right-click/two-finger tap on **index.html** and choose **Open With > Chrome**
+
+        File naming tips: use lowercase letters, avoid spaces and use dashes or underscores for multi-word file names (e.g. about-me.html).<!-- .element: class="footnote" -->
 
         Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex1.html](project/examples/index-ex1.html)
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <!-- <section class="slide" data-markdown>
       ##Good File Naming Habits
 
 * Use lowercase letters. (e.g. about.html instead of About.html or ABOUT.html)
@@ -273,7 +261,7 @@ With the entire folder selected, select **Open**. The folder will appear in the 
 * Keep your file names concise, yet meaningful. (e.g. about.html, contact.html instead of page1.html, page2.html)
 
 These file naming tips can be applied to any files such as images, folders, CSS, etc.
-    </section>
+    </section> -->
 
     <section class="slide title" data-markdown>
       #Page Layout
@@ -849,9 +837,42 @@ margin: 0px;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
+        ##Background Images, Part 2
+
+        If the image is smaller than the width of your browser window, the image will repeat by default.
+
+        ![](framework/img/workshop/exercise-8-bgrepeat.jpg)
+
+        Let's add three more values: `no-repeat`, `cover` and `fixed`.  The end code will look like this:
+        
+        ```
+        header { /* longhand */
+          background-image: url(../images/baltimore-rowhouses.jpg);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        ```
+        ```
+        header { /* shorthand */
+          background: url(../images/baltimore-rowhouses.jpg) no-repeat fixed;
+          background-size: cover;
+        }
+        ```
+
+        Note that <!-- .element: class="footnote" -->`background-size` is the longhand property. To include it in the shorthand style, it **must** be included after `background-position`, separated with the `/` character. If no background position value is used, background-size won’t work in the shorthand style so in this case, it may be less error prone to just add it via the longhand property. More about background [here](https://css-tricks.com/almanac/properties/b/background/) and [here](http://www.carsonshold.com/2013/02/css-background-sizecover-doesnt-like-fixed-positioning/).
+
+        Let's add this to our project, one value at a time, to see what each one does. Try scrolling and minimizing and maximizing your browser window!
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
           ##Break Time! (10 mins)
 
           ###Optional exercises
+
+          1. Double check your code.  You can check your code against [project/examples/index-ex8.html](project/examples/index-ex8.html) and [project/examples/css/styles-ex8.css](project/examples/css/styles-ex8.css)
 
           1. Find your own image to use as the header background.  Here&#39;s a resource for a list of free stock photography sites:
             https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b
@@ -861,17 +882,169 @@ margin: 0px;</textarea>
           Today we&#39;ll be using a free service provided by Google Fonts: http://www.google.com/fonts
       </script>
     </section>  
+
     <section class="slide" data-markdown>
       <script type="text/template">
-        There are many other background options such as:
+        ##CSS Font Styles
 
-        background-size
-        background-position
-        background-attachement
-        many more!
+        Let&#39;s look at a few CSS properties for styling text. Change some values below and see what happens!
+
+        <textarea class="snippet" data-subject="#css-type">color: slateblue;
+line-height: 1.25;
+font-family: Helvetica, Arial, serif;
+font-size: 16px;
+font-weight: normal;
+text-transform: lowercase;</textarea>
+
+        <div id="css-type" class="example">
+            <p>Just some text to test out the above styles. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
+        </div>
+
+        Additional Resource:<!-- .element: class="footnote" --> [Sitepoint Typographical Properties](http://reference.sitepoint.com/css/typography)
+
+        <div class="presenter-notes">
+            <p>Explain what each property does while updating each example in the code editor. Talk about the difference between using line-height with and without a measurement unit.</p>
+        </div>
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Inheritance and Specificity
+
+        One of the strengths of CSS is styles can be inherited from parent to child elements using a family tree relationship between the elements.
+
+        ```
+        <body>
+          <h1>My Website</h1><!-- child of body -->
+          <p>This is a paragraph.</p><!-- sibling of h1 -->
+        </body>
+        ```
+        ```
+        body {
+          color: blue;
+          font-family: Helvetica, Arial, sans-serif;
+        }
+        h1 {
+          color: black;
+        }
+        ```
+
+        In the above example, the CSS properties in the body selector is inherited by the children and descendants so all the text would be blue and display the Helvetica font. However, when a more specific selector is used (`h1`), it overrides the inherited values because it&#39;s more *specific*.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #9: Typography
+
+        Services like [Google Fonts](http://www.google.com/fonts) make it easier to add variety to your font choices. Google Fonts allows you to link directly to their hosted stylesheet and fonts making it available to all users that visit your site.
+
+        1. Select the fonts you want to use and **Add to Collection**.
+        1. You can **Review** them to take a closer look, then choose **Use** when ready.
+        1. Select font weights. The more you choose, the more it will slow down page load time.
+        The default character set should contain what you need. Only select an option if you need to add additional language support.
+        1. Grab the <link> code snippet and add it the <head> part of your page.
+        1. Use the new fonts with the font-family property as listed in the example on the Google Fonts page.
+        
+        That&#39;s it!
       </script>
     </section>
     
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          ##Class Exercise #9: Typography (continued)
+
+          Make sure the Google Font stylesheet has been added to your HTML page to use the fonts on website. 
+
+          Let&#39;s add the base font to the `body` element, so all the descendant elements can inherit this style.  You can change the `font-weight` too.
+
+          ```
+          body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+          }
+          ```
+
+          Now let&#39;s make all the `<h1>` headings in the page have the same styles too. 
+
+          ```
+          h1 {
+            font-size: 50px;
+            font-family: 'Satisfy', cursive;
+          }
+          ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          ##Class Exercise #9: Typography (continued)
+
+          What if you want the `h1` in the `header` to look different than all the other `h1` tags? You can use a **descendant selector** to specifically select a tag within another tag.
+
+          ```xml
+          <header id="home">
+            <h1>Kima Greggs</h1>
+          </header>
+          ```
+
+          ```
+          h1 {
+            font-size: 50px;
+            font-family: 'Satisfy', cursive;
+          }
+          header h1 { 
+            font-size: 150px;
+            color: black;
+          }
+          ```
+
+          `header h1` is more specific so it will override the `font-size` in the `h1` declaration.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Descendant selectors
+            
+        Matches any element that is a descendant (nested tag) of the element declared before it.
+
+        ```css
+        p a {
+          /* targets only anchor link tags nested inside of a p tag */
+        }
+        ```
+        **Pro tip!** Avoid going more than three levels.
+
+        ```
+        nav ul li a span {
+          /* NOOOOOOOOOOO */
+        }
+        ```
+
+        You can skip a level but specificity rules still apply. For example, `nav ul li a` would override `nav a` because it&#39;s more specific. It&#39;s usually easier to start with generic selectors and make them more specific, as needed.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Chrome Dev Tools
+
+        You can view the source of any web page by right-clicking (or two-finger tap) on *any* web page! Go to http://ladieslearningcode.com and view the source. That's HTML.
+
+        **Chrome Developer tools** take it a step further and allows us to *inspect* any web page making it easier to test and debug code. The tools can be accessed in 3 ways:
+
+        * right-click / two-finger tap on a web page and select **Inspect Element**
+        * select the menu icon ![](framework/img/workshop/menu-icon-chrome.png) in the top right hand corner and select **Tools > Developer Tools**
+        * keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
+
+        More about dev tools:<!-- .element: class="footnote" --> http://discover-devtools.codeschool.com <br>
+        To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en).<br>
+        Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
+      </script>
+    </section>
+
     <section class="slide" data-markdown>
       <script type="text/template">
       ##Metadata
