@@ -1,0 +1,124 @@
+/* GLOBAL STYLES 
+-----------------*/
+/* apply a natural box layout model to all elements, but allowing components to change
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.5;
+  background: url(../images/8.jpg) fixed;
+  color: #ededed;
+}
+
+.content-wrap {
+  width: 800px;
+  margin: 0 auto;
+  padding: 125px 0;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: 'Satisfy', cursive;
+  margin: 10px 0;
+}
+
+a {
+  color: #8c9d87;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+
+/* HEADER 
+-----------------*/
+header {
+  text-align: center;
+  padding: 250px 0 200px;
+  background: url("../images/baltimore-rowhouses.jpg") no-repeat fixed;
+  background-size: cover;
+}
+header h1 {
+  font-size: 150px;
+  color: black;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  text-align: right;
+}
+nav a {
+  display: inline-block;
+  padding: 30px;
+  text-transform: uppercase;
+}
+
+.logo {
+  border-radius: 50%;
+  color: #8c9d87;
+  height: 70px;
+  width: 70px;
+  font-size: 28px;
+  font-family: 'Satisfy', cursive;
+  display: inline-block;
+  line-height: 70px;
+  border: 2px solid #8c9d87;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+}
+.logo:hover {
+  color: white;
+}
+
+/* ABOUT 
+-----------------*/
+.about {
+  background: #111;
+}
+
+.profile-img {
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* EXTRAS 
+-----------------*/
+.extras {
+  font-size: 90px;
+  color: black;
+}
+
+/* FOOTER 
+-----------------*/
+footer {
+  background: #111;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+i {
+  width: 30px;
+  text-align: center;
+}
+
+.copyright {
+  margin-top: 75px;
+  font-size: 14px;
+}

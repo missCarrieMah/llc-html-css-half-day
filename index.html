@@ -597,7 +597,7 @@ These file naming tips can be applied to any files such as images, folders, CSS,
 
         ![](framework/img/workshop/exercise-5.png)
 
-        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex2.html](project/examples/index-ex5.html)
+        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex5.html](project/examples/index-ex5.html)
       </script>
     </section>
 
@@ -703,6 +703,38 @@ These file naming tips can be applied to any files such as images, folders, CSS,
 
     <section class="slide" data-markdown>
       <script type="text/template">
+          ##CSS colours
+
+          **keywords** - use the actual name (e.g. `red`, `green`, `blue`, `pink`, `papayaWhip`, `paleGoldenrod`, etc)
+
+          **RGB (red-green-blue)** - uses 3 numerical values from `0`-`255`. `0` represents black, `255` represents white 
+
+          **hex code** - number sign (`#`) followed by six hexadecimal characters (0-9, A-F)
+          
+          ```
+          /* These are all the same colour */
+          p {
+            background: firebrick;
+            background: #B22222;
+            background: rgb(178,34,34);
+          }
+          ```
+
+          <div class="footnote">
+            <br>
+            **Colour resources:**  
+
+            http://colours.neilorangepeel.com   
+            http://www.colorpicker.com  
+            http://www.colourlovers.com  
+            http://flatuicolors.com   
+            http://color.hailpixel.com
+          </div>
+      </script>
+    </section>  
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
         ##Background images
 
         The `background` property can be used to add colours or background images. There are already a few to choose from in your project images folder.
@@ -728,7 +760,7 @@ These file naming tips can be applied to any files such as images, folders, CSS,
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #7
+        ##Class Exercise #7: Background styles
 
         Add a background image to the `<header>` section. There are a few options in the images folder in your projects to choose from for now.
 
@@ -868,6 +900,34 @@ margin: 0px;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
+          ##Background images on different layers
+
+          Everytime an HTML is nested, the elements become stacked in layers, kind of like a sandwich!
+          
+          Image source and further reading<!-- .element: class="footnote" --> [here](http://www.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/).
+
+          ![](framework/img/workshop/graphical-z-index.gif)<!-- .element: class="col-2" -->
+
+          <div class="col-2 delayed">
+          If a background image is added to `body`, it will appear behind the header.  Let&#39;s add it!  
+          In your images folder, there are a series of pattern tile images.  Use those or any other image to test this effect.
+
+          <pre>
+          ```
+          body {
+            background: url(../images/8.jpg) fixed;
+          }
+          ```
+          </pre>
+
+          <span class="footnote">no-repeat is not needed because we want the pattern tile image to repeat and cover the entire area.</span>
+          </div>
+          
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
           ##Break Time! (10 mins)
 
           ###Optional exercises
@@ -1001,6 +1061,8 @@ text-transform: lowercase;</textarea>
           ```
 
           `header h1` is more specific so it will override the `font-size` in the `h1` declaration.
+
+          Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex9.html](project/examples/index-ex9.html) and [project/examples/css/styles-ex9.css](project/examples/css/styles-ex9.css)
       </script>
     </section>
 
@@ -1008,7 +1070,7 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         ##Descendant selectors
             
-        Matches any element that is a descendant (nested tag) of the element declared before it.
+        Matches any element that is a descendant (nested tag) of the element declared before it. Note the space in *between* each selector. This is a requirement.
 
         ```css
         p a {
@@ -1024,6 +1086,110 @@ text-transform: lowercase;</textarea>
         ```
 
         You can skip a level but specificity rules still apply. For example, `nav ul li a` would override `nav a` because it&#39;s more specific. It&#39;s usually easier to start with generic selectors and make them more specific, as needed.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class & ID attributes
+        
+        When **type selectors** are too general (targeting the HTML element), HTML gives us two ways to attach extra identifying information to target specific elements with two **attributes**, `class` (can be used multiple times) and `id` (can only be used once per page).  
+
+        ```xml   
+        <p>Regular text.</p>
+        <p class="error">Red error message text.</p>
+        <p id="error">Will display a red border.</p>
+        ```
+
+        Targets ALL paragraphs
+        ``` 
+        p { color: blue; }
+        ```
+        Only applies to any element that contains this class, defined by leading period 
+        ```
+        .error { color: red; }
+        ```
+        Only applies to any element that contains this id, defined by number symbol 
+        ```
+        #error { border: 1px solid red; }
+        ```
+
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          ##Aligning Content
+
+          Notice how the text in the About me section spans the whole width of the browser window? We can restrict the size of it by adding the `width` property.  Eventually, we'd also like to add a background color to it as well.
+
+          What do you think will happen when both width and background colour is applied to it?
+          
+          It won't be quite what we want. It will look something like this:<!-- .element: class="delayed" -->
+
+          ![](framework/img/workshop/no-content-wrap.png)<!-- .element: class="delayed" -->
+      </script>
+    </section>      
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          ##Aligning Content
+
+          The margin property can also be used to center align block level elements. (More about block level elements later). First, a width needs to be set. Then, setting the left &amp; right values to <code>auto</code> will find the center of the page. The <code>0</code> just refers to the top and bottom value. 
+
+          Let&#39;s try adding `width` and `margin` it below to see the changes.</p>
+
+<textarea class="snippet" data-subject="#margin-auto">background-color: lightblue;
+height: 100px;</textarea>
+
+          <div id="margin-auto">box</div>
+
+          The content is centered but the background colour is restricted by the width dimension because it doesn’t span the rest of the page anymore.<!-- .element: class="delayed" -->
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Creating a content wrapper
+
+        Use the `<div>` tag to *wrap* the content. This will create a new container to move just the content. Then, add the background style to the outer container (`<section class="about">`).
+
+        A<!-- .element: class="footnote" --> `div` is used because the content-wrap has no semantic meaning. We just need to put a box around the content to style it. 
+
+        ```xml
+        <section class="about">
+          <div class="content-wrap">
+            content to be aligned goes here
+          </div>
+        </section>
+        ```
+
+        <textarea class="snippet" data-subject="#wrapper-test">.about {
+          background: lightgreen;
+        }
+        .content-wrap { 
+          background: gray;
+          width: ;
+          margin: ;
+        }</textarea>
+
+        <div id="wrapper-test" class="example" style="padding:0;">
+          <section>
+            <div class="content-wrap">
+              content to be aligned goes here
+            </div>
+          </section>
+        </div>
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          ##Exericise #10 - Aligning Content (10mins)
+          add content-wrap
+          About, Extras, Contact/Footer
+
+          add bg color to about and footer
       </script>
     </section>
 
