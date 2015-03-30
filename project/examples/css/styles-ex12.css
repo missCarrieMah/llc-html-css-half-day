@@ -26,11 +26,44 @@ a {
 
 /* SHARED STYLES 
 -----------------*/
+.content-wrap {
+  width: 800px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
 nav,
 .about, 
 footer {
   background: #111;
   color: #efefef;
+}
+
+
+/* LOGO 
+-----------------*/
+.logo {
+  font-family: 'Satisfy', cursive;
+  font-size: 28px;
+  border: 2px solid #8c9d87;
+  border-radius: 50%;
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  text-align: center;
+}
+
+
+/* NAV 
+-----------------*/
+nav {
+  text-align: right;
+}
+nav a {
+  display: inline-block;
+  padding: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 

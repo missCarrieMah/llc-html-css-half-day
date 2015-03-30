@@ -12,11 +12,45 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
+  background: url(../images/6.jpg) no-repeat fixed;
+  background-size: cover;
 }
 h1 {
   font-size: 50px;
   font-family: 'Satisfy', cursive;
 }
+a {
+  color: #8c9d87;
+}
+
+
+/* SHARED STYLES 
+-----------------*/
+.content-wrap {
+  width: 800px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+nav,
+.about, 
+footer {
+  background: #111;
+  color: #efefef;
+}
+
+
+/* NAV 
+-----------------*/
+nav {
+  text-align: right;
+}
+nav a {
+  display: inline-block;
+  padding: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 
 /* HEADER 
 -----------------*/

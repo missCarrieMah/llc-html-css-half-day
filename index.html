@@ -204,11 +204,13 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
           </body>
         </html>
         ```
-        **&lt;html>** - Identifies the document as HTML. Ancestor of all HTML elements. The `lang="en"` attribute is optional but recommended since it classifies the language and can be used for translation tools and improve quality of search results.
+        **&lt;html>** - Identifies the document as HTML. The `lang="en"` attribute is optional but recommended since it classifies the language and can be used for translation tools and improve quality of search results.
 
         **&lt;head>** - Contains info about the current page (more on this later). `<title>` must be included and defines the page title, which is then displayed in the browser toolbar, bookmarks and search engine results.
 
         **&lt;body>** - All content to be displayed in the browser window, also known as the viewport, goes here.
+
+        TODO - something about family tree relationship
       </script>
     </section>
 
@@ -391,10 +393,12 @@ With the entire folder selected, select **Open**. The folder will appear in the 
 
           ```xml
           <h1>Pre-HTML5 Heading Outline</h1>
+
           <div class="intro">
             <h2>Introduction</h2>
             <p>stuff here</p>
           </div>
+
           <div class="first-idea">
             <h2>First supporting idea</h2>
             <h3>point 1</h3>
@@ -404,15 +408,17 @@ With the entire folder selected, select **Open**. The folder will appear in the 
 
           ```xml
           <h1>HTML5 Heading Outline</h1>
+
           <section class="intro">
             <h1>Introduction</h1>
             <p>stuff here</p>
-          </div>
+          </section>
+
           <section class="first-idea">
             <h1>First supporting idea</h1>
             <h2>point 1</h2>
             <h2>point 2</h2>
-          </div>
+          </section>
           ```
       </script>
     </section>
@@ -432,14 +438,13 @@ With the entire folder selected, select **Open**. The folder will appear in the 
         1. Add a quote/heading into the **Extras** section.
         1. In the **Footer/Contact**, add a heading and a paragraph.
 
-        Don&#39;t know what content to add? Use placeholder text!
+        <div class="footnote">
+          Don&#39;t know what content to add? Use placeholder text!
+          <br>
+          http://meettheipsums.com, http://thewireipsum.com, http://www.quotes.net, http://blokkfont.com (blokkfont.com an nice design alternative but make sure you have some actual text on your page to style later.)
+        </div>
         
-        * http://meettheipsums.com  
-        * http://thewireipsum.com  
-        * http://www.quotes.net
-        * http://blokkfont.com  
         
-        (blokkfont.com an nice design alternative but make sure you have some actual text on your page to style later.<!-- .element: class="footnote" -->)
       </script>
     </section>
 
@@ -541,6 +546,12 @@ With the entire folder selected, select **Open**. The folder will appear in the 
           ```   
       </script>
     </section> 
+
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+          ##CSS is all about breaking stuff and putting it back together the way we want it to be.
+      </script>
+    </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -684,6 +695,8 @@ With the entire folder selected, select **Open**. The folder will appear in the 
 
           ![](framework/img/workshop/exercise-7.png)
         </div>
+
+        The "box" is only as big as its content, in this case, your name and the image is just set as a background so it does not take up any space. We&#39;ll have to add some space.<!-- .element: class="delayed" -->
       </script>
     </section>
 
@@ -808,34 +821,6 @@ margin: 0px;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Background images on different layers
-
-          Everytime an HTML is nested, the elements become stacked in layers, kind of like a sandwich!
-          
-          Image source and further reading<!-- .element: class="footnote" --> [here](http://www.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/).
-
-          ![](framework/img/workshop/graphical-z-index.gif)<!-- .element: class="col-narrow" -->
-
-          <div class="col-wide delayed">
-            If a background image is added to `body`, it will appear behind the header.  Let&#39;s add it!
-
-          <pre>
-
-          ```
-          body {
-            background: url(../images/6.jpg) no-repeat fixed;
-            background-size: cover;
-          }
-          ```
-          </pre>
-          </div>
-
-          Your page probably doesn't look too polished just yet, but remember this is a step by step process and learning how to make changes means you can change it however you'd like!<!-- .element: class="delayed" -->
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
           ##Break Time! (10 mins)
 
           ###Optional exercises
@@ -849,7 +834,7 @@ margin: 0px;</textarea>
 
           Today we&#39;ll be using a free service provided by Google Fonts: http://www.google.com/fonts
       </script>
-    </section>  
+    </section> 
 
     <section class="slide" data-markdown>
       <script type="text/template">
@@ -999,6 +984,39 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
+        ##Exercise #9: Background styles & z-axis
+        
+        Everytime an HTML element is nested, the elements are stacked in layers, kind of like a sandwich!
+        
+        Image source and further reading<!-- .element: class="footnote" --> [here](http://www.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/).
+
+        ![](framework/img/workshop/graphical-z-index.gif)<!-- .element: class="col-narrow" -->
+
+        <div class="col-wide delayed">
+          If a background image/colour is added to `body`, it will appear behind the `header`. 
+        <pre>
+
+        ```
+        body {
+          background: url(../images/6.jpg) no-repeat fixed;
+          background-size: cover;
+        }
+        ```
+        </pre>
+        </div>
+
+        Next, add a background colour to the Nav, About and Footer<!-- .element: class="delayed" --> <span class="footnote">(the LLC project uses #111111)</span>. Change the font color (if needed).
+
+        How come the font color for the links didn&#39;t change?<!-- .element: class="delayed" -->
+
+        Change the font colour for the links<!-- .element: class="delayed" --> <span class="footnote">(the LLC project uses #8c9d87)</span>
+
+        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex9.html](project/examples/index-ex9.html) and [project/examples/css/styles-ex9.css](project/examples/css/styles-ex9.css)
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
         ##Class & ID attributes
         
         HTML gives us two ways to attach extra identifying information to target specific elements with two **attributes**, `class` (can be used multiple times) and `id` (can only be used once per page).  
@@ -1094,19 +1112,36 @@ height: 100px;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Class Exericise #9 - Aligning Content & Colours
+          ##Class Exericise #10 - Aligning Content & Colours
+
+          When we're done, the changes will look similar to this:
+
+          ![](framework/img/workshop/with-content-wrap.png)
           
           1. Add the `content-wrap` `<div>` to the About, Extras and Footer section, like in the previous example.  
           <p class="footnote">Add it to the header if you want it to be the same width as the content but since it only contains your name and it&#39;s centered aligned, you might not need to. Leave the nav as well. We've got other plans for it.</p>
 
           1. Add the `.content-wrap` styles to styles.css (`width`, `margin`, `padding`)
-          1. Add a background colour to the Nav, About and Contact/Footer (the LLC project uses #111111) and change the font color (if you're using a dark background).
 
-            How come the font color for the links didn&#39;t change? <!-- .element: class="delayed" -->
-          1. Change the font colour for the links (the LLC project uses #8c9d87) <!-- .element: class="delayed" -->
 
-          Example for reference:<!-- .element: class="footnote delayed" --> [project/examples/index-ex9.html](project/examples/index-ex9.html) and [project/examples/css/styles-ex9.css](project/examples/css/styles-ex9.css)
+          Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex10.html](project/examples/index-ex10.html) and [project/examples/css/styles-ex10.css](project/examples/css/styles-ex10.css)
 
+      </script>
+    </section>
+
+    <section class="slide side-by-side" data-markdown>
+      <script type="text/template">
+          ##Let&#39;s style the nav!
+
+          Currently our navigation contains three links inside of a `nav` element.  In order to style the links the way we want to, we need to first talk about how *inline* and *block* elements work.
+
+          We&#39;re going to take it from the example on the left and make it look like the example on the right.
+
+          ![](framework/img/workshop/nav-no-style.png)
+          ![](framework/img/workshop/nav-stlyed.png)
+
+          <br>
+          You may have seen, heard about or created site navigation using a list.  Read more about it here:<br> <!-- .element: class="footnote" -->https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/ 
       </script>
     </section>
 
@@ -1124,16 +1159,16 @@ height: 100px;</textarea>
 
         <textarea class="snippet" data-subject="#inline">background: ;</textarea>
         <a id="inline" href="#">link</a>
-
-        
       </script>
     </section>
-    
+
     <section class="slide" data-markdown>
       <script type="text/template">
         ##CSS Display Property
 
         As with other default styles, CSS can be used to change the behavior of inline and block elements with the CSS `display` property.
+
+        More about inline & block elements and the display property <!-- .element: class="footnote" --> [here](https://css-tricks.com/almanac/properties/d/display/).
 
         ```
         display: block;
@@ -1153,24 +1188,165 @@ height: 100px;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Nav styling
+          ##Class Exercise #11: Style that Nav!
+
+          1. Change the links (`<a>`) to `display: inline-block` and add `padding` (hint: use a descendant selector)
+            <div class="delayed">
+            <pre><code>nav a {
+              display: inline-block;
+              padding: 30px;
+            }
+            </pre></code>
+            </div>
+          1. Remove the default underline style and transform the text to uppercase.<!-- .element: class="delayed" -->
+            <div class="delayed">
+            <pre><code>nav a {
+              display: inline-block;
+              padding: 30px;
+              text-decoration: none;
+              text-transform: uppercase;
+            }
+            </pre></code>
+            </div>
+          1. Align the text to the right of the page. <!-- .element: class="delayed" -->
+            <div class="delayed">
+            <pre><code>nav {
+              text-align: right;
+            }
+            </pre></code>
+            </div>
+
+          Example:<!-- .element: class="footnote delayed" --> [project/examples/index-ex11.html](project/examples/index-ex11.html) and [project/examples/css/styles-ex11.css](project/examples/css/styles-ex11.css)
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Create a logo
+          ##Class Exercise #12: Create a logo
+
+          Let&#39;s create a simple logo using just CSS! 
+
+          ![](framework/img/workshop/logo.png)
+
+          First, create a "box" to put the logo in. Since this is not a structural part of the page, use a `<span>` instead of a `<div>`. Also, add a class attribute to hook the CSS to it and add it to the `<nav>` section.
+
+          ```
+          <nav>
+            <span class="logo">KG</span>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          ```
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Positioning
+        ##Create a logo (continued)
+
+        1. Style the text.  Change the `font-family` and `font-size`. What selector should we use?
+          ```css
+          .logo {
+              font-family: 'Satisfy', cursive;
+              font-size: 28px;
+          }
+          ```
+        1. Add a border around the initals.  
+          ```css
+          border: 2px solid #8c9d87; /* adds the border size, style and colour */
+          border-radius: 50%; /* turns the element into a perfect circle */
+          ```
+        1. Change it from an `inline` element to `inline-block` (best of both worlds) and add height and width. Height and width has to be the same to make sure the logo stays as a circular shape instead of an oval.
+          ```css
+          display: inline-block;
+          height: 70px;
+          width: 70px;
+          ```
+        1. Vertically align the initials in the circle and change the colour (since it will eventually be moved onto the dark background of the nav). There are many ways to vertically align elements. This is just one way.
+
+          Set the `line-height` to the same value as your `height` value. Then, set the text to center align to align it horizontally.
+
+          ```
+          line-height: 70px;
+          text-align: center;
+          ```
+          Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex12.html](project/examples/index-ex12.html) and [project/examples/css/styles-ex12.css](project/examples/css/styles-ex12.css)
       </script>
     </section>
 
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          ##Intro to CSS Floats and Positioning
 
-     <section class="slide" data-markdown>
+          In HTML, elements stack on top of each other in the order of how it is written.
+          ```
+          <p>element 1</p>
+          <p>element 2</p>
+          <p>element 3</p>
+          ```
+          renders as:
+          <div class="example">
+            <p>element 1</p>
+            <p>element 2</p>
+            <p>element 3</p>
+          </div>
+
+          In order to move elements outside of the default stacking order, we can use CSS floats or positioning.  Both of these concepts are the more complicated parts of CSS and require much more discussion.  
+
+          Here are two indepth tutorials/articles [here](http://learn.shayhowe.com/html-css/positioning-content/) and [here](http://spyrestudios.com/css-in-depth-floats-positions/).
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+          ##Final stretch!
+
+          For our last exercise we're going to align the logo to the left and create a fixed nav.
+
+          First up, the logo.  Float it to the left and add some margin to move it away from the edge of the page.
+
+          ```css
+          .logo {
+            float: left;
+            margin: 4px;
+          }
+          ```
+
+          Next up, the nav. Use `fixed` positioning so it can stay in one spot when the page scrolls (just like the background images).
+
+          ```css
+          nav {
+            position: fixed;
+          }
+          ```
+
+          By default, when using positioning, the element automatically becomes the width of it's content.  That&#39;s why it looks like this: 
+
+          ![](framework/img/workshop/position-fixed.png)
+
+          When using `position`, it also unlocks 4 position specific properties: `top`, `right`, `bottom` and `left`.  For our nav, we want it to be at the top of the page, all the way to the left and all the way to the right.  Update the nav css to:
+          
+          ```css
+          nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+          }
+          ```
+
+          Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex13.html](project/examples/index-ex13.html) and [project/examples/css/styles-ex13.css](project/examples/css/styles-ex13.css)
+      </script>
+    </section>
+
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+          #Extras
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
       <script type="text/template">
         ##Chrome Dev Tools
 
