@@ -252,21 +252,6 @@ With the entire folder selected, select **Open**. The folder will appear in the 
       </script>
     </section>
 
-    <!-- <section class="slide" data-markdown>
-      ##Good File Naming Habits
-
-* Use lowercase letters. (e.g. about.html instead of About.html or ABOUT.html)
-* Avoid s p a c e s. Underscores (_) or dashes (-) are valid. However, dashes are generally preferred for SEO (search engine optimization). (e.g. business-hours.html instead of business hours.html - The browser will interpret it as business%20hours.html)
-* Avoid symbols like # & * in your file name.
-* Keep your file names concise, yet meaningful. (e.g. about.html, contact.html instead of page1.html, page2.html)
-
-These file naming tips can be applied to any files such as images, folders, CSS, etc.
-    </section> -->
-
-    <section class="slide title" data-markdown>
-      #Page Layout
-    </section>
-
     <section class="slide" data-markdown>
       <script type="text/template">
         ##Planning the page layout
@@ -360,7 +345,7 @@ These file naming tips can be applied to any files such as images, folders, CSS,
         We can also use HTML comments to help organize the content.  The syntax is:
 
         ```xml
-        <!--  comment goes in between here -->
+        <!-- comment goes in between here -->
         ```
 
         Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex2.html](project/examples/index-ex2.html)
@@ -379,7 +364,7 @@ These file naming tips can be applied to any files such as images, folders, CSS,
         ```xml
         <p>This is a paragraph.</p>
         ```
-        <br>
+        ---
         There are six page headings tags ranging from `<h1>` to `<h6>`. Headings are used to describe the *hierarchy* of the page structure. Think about how you would arrange an essay outline.
 
           **Title** (`h1`) 
@@ -393,15 +378,6 @@ These file naming tips can be applied to any files such as images, folders, CSS,
             * point 1 (`h3`)
             * point 2 (`h3`)
           1. Conclusion (`h2`)
-        
-        ```xml
-        <h1>Title</h1>
-        <h2>Introduction</h2>
-        <h2>First supporting idea</h2>
-        <h3>point 1</h3>
-        <h3>point 2</h3>
-        ...
-        ```
       </script>
     </section>
 
@@ -502,6 +478,11 @@ These file naming tips can be applied to any files such as images, folders, CSS,
         ```xml
         <a href="http://ladieslearningcode.com" target="_blank">Ladies Learning Code</a>
         ```
+
+        #####Set an email link
+        ```xml
+        <a href="mailto:hello@myemail.com">hello@myemail.com</a>
+        ```
       </script>
     </section>
 
@@ -515,91 +496,20 @@ These file naming tips can be applied to any files such as images, folders, CSS,
           <span class="footnote">(If you get stuck, refer to the previous slide for examples or ask a mentor!)</span>
         1. Add some links within your paragraphs.  You can nest the `<a>` tags within the `<p>` tags and just surround the text that you want show as a link.
 
-        ```xml
-        <p><a href="http://hbo.com/the-wire" target="_blank">Link example</a> in a paragraph.</p>
-        <p>Another paragraph. Lorem ipsum dolo sit amet, consectetur adipisicing elit laboriosam officia.</p>
-        ```
-        We currently don&#39;t have much content so the in page links won&#39;t jump to the page section if the content isn&#39;t long enough to scroll. Either, minimize the height of your browser or test it again when we add more content and styles.  It should look something like this:
+          ```xml
+          <p><a href="http://hbo.com/the-wire" target="_blank">Link example</a> in a paragraph.</p>
+          <p>Another paragraph. Lorem ipsum dolo sit amet, consectetur adipisicing elit laboriosam officia.</p>
+          ```
+          We currently don&#39;t have much content so the in page links won&#39;t jump to the page section if the content isn&#39;t long enough to scroll. Either, minimize the height of your browser or test it again when we add more content and styles.  It should look something like this:
 
-        ![](framework/img/workshop/exercise-4.gif)
+          ![](framework/img/workshop/exercise-4.gif)
+        1. Add your email link in the contact section.
 
         Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex4.html](project/examples/index-ex4.html)
       </script>
     </section>
     
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        ##Lists 
-
-        Ordered Lists are used for a items that should be displayed in a specific, numbered order. Two tags are required, (`<ol>`) and (`<li>`) to create the list. You can only put content within the `li` tags (list item), **not** the `ol` (ordered list). 
-
-        ```xml
-        <p>My top 5 tv shows:</p>
-        <ol>
-          <li>The Wire</li>
-          <li>Breaking Bad</li>
-          <li>Homeland</li>
-          <li>House of Cards</li>
-          <li>Game of Thrones</li>
-        </ol>
-        ```
-
-        Renders as:
-        <div class="example">
-          <p>My top 5 tv shows:</p>
-          <ol>
-            <li>The Wire</li>
-            <li>Breaking Bad</li>
-            <li>Game of Thrones</li>
-            <li>House of Cards</li>
-            <li>Homeland</li>
-          </ol>
-        </div>
-
-        Unordered lists are similar but start with the unordered list tag (`<ul>`). This list of items do not depend on any specific order.
-
-        ```xml
-        <ul>
-          <li>Home</li>
-          <li>Portfolio</li>
-          <li>Blog</li>
-          <li>Contact Me</li>
-        </ul>
-        ```
-
-        Renders as:
-        <div class="example">
-          <ul>
-            <li>Home</li>
-            <li>Portfolio</li>
-            <li>Blog</li>
-            <li>Contact Me</li>
-          </ul>
-        </div>
-      </script>
-    </section>
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        ##Exercise #5: Add social media/contact list (10mins)
-
-        Add a list of links to your social media accounts and/email.  We can use an unordered list since the order doesn&#39;t matter.
-
-        Be sure to nest the links (`<a>`) *inside* of the list item (`<li>`) as well. For emails, see the example below.  Note that the `href` value is different.  This syntax will automatically open the users email client when they click on the link.
-
-        Example:
-        ```
-        <ul>
-          <li><a href="mailto:me@email.com">me@email.com</a></li>
-          <li><a href="https://twitter.com">Twitter</a></li>
-        </ul>
-        ```
-        Your page should look something like this:
-
-        ![](framework/img/workshop/exercise-5.png)
-
-        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex5.html](project/examples/index-ex5.html)
-      </script>
-    </section>
+    
 
     <section class="slide title" data-markdown>
       <script type="text/template">
@@ -644,8 +554,8 @@ These file naming tips can be applied to any files such as images, folders, CSS,
 
         ```
         <head>
-            <title>Page Title</title>
-            <link rel="stylesheet" href="css/style.css">
+          <title>Page Title</title>
+          <link rel="stylesheet" href="css/style.css">
         </head>
         ```
         <br>
@@ -681,7 +591,7 @@ These file naming tips can be applied to any files such as images, folders, CSS,
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #6: Create a CSS File
+        ##Create a CSS File
 
         Back in Sublime Text, create a new CSS file by selecting **File > New File** or use a [keyboard shortcut](shortcuts-cheatsheet.html). Name the file with a **.css** extension. Let&#39;s call it **styles.css** and add it to **index.html**.
 
@@ -760,7 +670,7 @@ These file naming tips can be applied to any files such as images, folders, CSS,
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #7: Background styles
+        ##Class Exercise #5: Background styles
 
         Add a background image to the `<header>` section. There are a few options in the images folder in your projects to choose from for now.
 
@@ -842,7 +752,7 @@ margin: 0px;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #8: Update the page spacing
+        ##Class Exercise #6: Update the page spacing
 
         Notice that the content doesn&#39;t quite go to the edge of the page? That&#39;s because there&#39;s default spacing in the `body` element (as well as many other elements). Remove the test background color and replace it with `padding` and `margin` to reset the value. Save and check the changes in the browser.
 
@@ -861,15 +771,13 @@ margin: 0px;</textarea>
           padding: 150px 0;
         }
         ```
-        
-
-        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex8.html](project/examples/index-ex8.html) and [project/examples/css/styles-ex8.css](project/examples/css/styles-ex8.css)
+        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex6.html](project/examples/index-ex6.html) and [project/examples/css/styles-ex6.css](project/examples/css/styles-ex6.css)
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #9: Background Images, Part 2
+        ##Class Exercise #7: Background Images, Part 2
 
         If the image is smaller than the width of your browser window, the image will repeat by default.
 
@@ -923,7 +831,6 @@ margin: 0px;</textarea>
           </div>
 
           Your page probably doesn't look too polished just yet, but remember this is a step by step process and learning how to make changes means you can change it however you'd like!<!-- .element: class="delayed" -->
-          
       </script>
     </section>
 
@@ -933,9 +840,9 @@ margin: 0px;</textarea>
 
           ###Optional exercises
 
-          1. Double check your code.  You can check your code against [project/examples/index-ex9.html](project/examples/index-ex9.html) and [project/examples/css/styles-ex9.css](project/examples/css/styles-ex9.css)
+          1. Double check your code.  You can check your code against [project/examples/index-ex7.html](project/examples/index-ex7.html) and [project/examples/css/styles-ex7.css](project/examples/css/styles-ex7.css)
 
-          1. Find your own image to use as the header background.  Here&#39;s a resource for a list of free stock photography sites:
+          1. Find your own background images.  Here&#39;s a resource for a list of free stock photography sites:
             https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b
 
           1. Find two fonts to use in your project.  Two different fonts are recommended.  The LLC project example uses [Roboto](http://www.google.com/fonts/specimen/Roboto) and [Satisfy](http://www.google.com/fonts/specimen/Satisfy). 
@@ -997,7 +904,7 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #10: Typography
+        ##Class Exercise #8: Typography
 
         Services like [Google Fonts](http://www.google.com/fonts) make it easier to add variety to your font choices. Google Fonts allows you to link directly to their hosted stylesheet and fonts making it available to all users that visit your site.
 
@@ -1015,7 +922,7 @@ text-transform: lowercase;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Class Exercise #10: Typography (continued)
+          ##Class Exercise #8: Typography (continued)
 
           (Make sure the Google Font stylesheet has been added to your HTML page to use the fonts on website.)<!-- .element: class="footnote" --> 
 
@@ -1041,7 +948,7 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Class Exercise #10: Typography (continued)
+          ##Class Exercise #8: Typography (continued)
 
           What if you want the `h1` in the `header` to look different than all the other `h1` tags? You can use a **descendant selector** to specifically select a tag within another tag.
 
@@ -1063,7 +970,7 @@ text-transform: lowercase;</textarea>
 
           `header h1` is more specific so it will override the `font-size` in the `h1` declaration.
 
-          Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex10.html](project/examples/index-ex10.html) and [project/examples/css/styles-ex10.css](project/examples/css/styles-ex10.css)
+          Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex8.html](project/examples/index-ex8.html) and [project/examples/css/styles-ex8.css](project/examples/css/styles-ex8.css)
       </script>
     </section>
 
@@ -1187,34 +1094,60 @@ height: 100px;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Class Exericise #11 - Aligning Content
+          ##Class Exericise #9 - Aligning Content & Colours
           
-          1. Add the **content-wrap** `<div>` to the About, Extras and Footer section, like in the previous example.  
-          <span class="footnote">(Add it to the header if you want it to be the same width as the content but since it only contains your name and it&#39;s centered aligned, you might not need to.)</span>
+          1. Add the `content-wrap` `<div>` to the About, Extras and Footer section, like in the previous example.  
+          <p class="footnote">Add it to the header if you want it to be the same width as the content but since it only contains your name and it&#39;s centered aligned, you might not need to. Leave the nav as well. We've got other plans for it.</p>
 
           1. Add the `.content-wrap` styles to styles.css (`width`, `margin`, `padding`)
-          1. Add a background colour to the Nav, About and Contact/Footer (the LLC project uses #111111) and change the font color (if needed).
+          1. Add a background colour to the Nav, About and Contact/Footer (the LLC project uses #111111) and change the font color (if you're using a dark background).
 
-            How come the font color for the links didn't change? <!-- .element: class="delayed" -->
+            How come the font color for the links didn&#39;t change? <!-- .element: class="delayed" -->
           1. Change the font colour for the links (the LLC project uses #8c9d87) <!-- .element: class="delayed" -->
+
+          Example for reference:<!-- .element: class="footnote delayed" --> [project/examples/index-ex9.html](project/examples/index-ex9.html) and [project/examples/css/styles-ex9.css](project/examples/css/styles-ex9.css)
+
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Chrome Dev Tools
+        ##Inline & Block Elements
 
-        You can view the source of any web page by right-clicking (or two-finger tap) on *any* web page! Go to http://ladieslearningcode.com and view the source. That's HTML.
+        **Block** elements span 100% of its container and can apply sizing properties to it.    
+        **Inline** elements are the same height and width of their content, does not apply sizing properties as expected and displays in a line. 
 
-        **Chrome Developer tools** take it a step further and allows us to *inspect* any web page making it easier to test and debug code. The tools can be accessed in 3 ways:
+        When in doubt, put a background colour on the element and if it spans the width of the container, then it's a block element. Otherwise, it's an inline element.
 
-        * right-click / two-finger tap on a web page and select **Inspect Element**
-        * select the menu icon ![](framework/img/workshop/menu-icon-chrome.png) in the top right hand corner and select **Tools > Developer Tools**
-        * keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
+        <textarea class="snippet" data-subject="#block" style="margin:0;">background: ;</textarea>
+        <p id="block">paragraph</p>
 
-        More about dev tools:<!-- .element: class="footnote" --> http://discover-devtools.codeschool.com <br>
-        To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en).<br>
-        Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
+        <textarea class="snippet" data-subject="#inline">background: ;</textarea>
+        <a id="inline" href="#">link</a>
+
+        
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##CSS Display Property
+
+        As with other default styles, CSS can be used to change the behavior of inline and block elements with the CSS `display` property.
+
+        ```
+        display: block;
+        display: inline;
+        display: inline-block;
+        ```
+
+        Let&#39;s look at this example again but this time, using the display property.
+
+        <textarea class="snippet" data-subject="#inline">background: lightblue;
+        display:;
+        padding:;
+        margin:;</textarea>
+        <a id="inline" href="#">link</a>
       </script>
     </section>
 
@@ -1236,6 +1169,99 @@ height: 100px;</textarea>
       </script>
     </section>
 
+
+     <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Chrome Dev Tools
+
+        You can view the source of any web page by right-clicking (or two-finger tap) on *any* web page! Go to http://ladieslearningcode.com and view the source. That's HTML.
+
+        **Chrome Developer tools** take it a step further and allows us to *inspect* any web page making it easier to test and debug code. The tools can be accessed in 3 ways:
+
+        * right-click / two-finger tap on a web page and select **Inspect Element**
+        * select the menu icon ![](framework/img/workshop/menu-icon-chrome.png) in the top right hand corner and select **Tools > Developer Tools**
+        * keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
+
+        More about dev tools:<!-- .element: class="footnote" --> http://discover-devtools.codeschool.com <br>
+        To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en).<br>
+        Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
+      </script>
+    </section>
+
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Lists 
+
+        Ordered Lists are used for a items that should be displayed in a specific, numbered order. Two tags are required, (`<ol>`) and (`<li>`) to create the list. You can only put content within the `li` tags (list item), **not** the `ol` (ordered list). 
+
+        ```xml
+        <p>My top 5 tv shows:</p>
+        <ol>
+          <li>The Wire</li>
+          <li>Breaking Bad</li>
+          <li>Homeland</li>
+          <li>House of Cards</li>
+          <li>Game of Thrones</li>
+        </ol>
+        ```
+
+        Renders as:
+        <div class="example">
+          <p>My top 5 tv shows:</p>
+          <ol>
+            <li>The Wire</li>
+            <li>Breaking Bad</li>
+            <li>Game of Thrones</li>
+            <li>House of Cards</li>
+            <li>Homeland</li>
+          </ol>
+        </div>
+
+        Unordered lists are similar but start with the unordered list tag (`<ul>`). This list of items do not depend on any specific order.
+
+        ```xml
+        <ul>
+          <li>Home</li>
+          <li>Portfolio</li>
+          <li>Blog</li>
+          <li>Contact Me</li>
+        </ul>
+        ```
+
+        Renders as:
+        <div class="example">
+          <ul>
+            <li>Home</li>
+            <li>Portfolio</li>
+            <li>Blog</li>
+            <li>Contact Me</li>
+          </ul>
+        </div>
+      </script>
+    </section>
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Exercise #5: Add social media/contact list (10mins)
+
+        Add a list of links to your social media accounts and/email.  We can use an unordered list since the order doesn&#39;t matter.
+
+        Be sure to nest the links (`<a>`) *inside* of the list item (`<li>`) as well. For emails, see the example below.  Note that the `href` value is different.  This syntax will automatically open the users email client when they click on the link.
+
+        Example:
+        ```
+        <ul>
+          <li><a href="mailto:me@email.com">me@email.com</a></li>
+          <li><a href="https://twitter.com">Twitter</a></li>
+        </ul>
+        ```
+        Your page should look something like this:
+
+        ![](framework/img/workshop/exercise-5.png)
+
+        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex5.html](project/examples/index-ex5.html)
+      </script>
+    </section>
     <section class="slide" data-markdown>
       <script type="text/template">
       ##Metadata
