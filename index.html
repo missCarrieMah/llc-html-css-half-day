@@ -1339,23 +1339,42 @@ height: 100px;</textarea>
           Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex13.html](project/examples/index-ex13.html) and [project/examples/css/styles-ex13.css](project/examples/css/styles-ex13.css)
       </script>
     </section>
-
+    
     <section class="slide title" data-markdown>
       <script type="text/template">
           #Extras
+          ##Resources and Project ideas
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+    <section id="extras" class="slide" data-markdown>
+      <script type="text/template">
+          ##Extras
+
+          Here are some additional resources, effects and content ideas to add to your site.
+
+          * [Chrome Developer Tools](index.html#devTools)
+          * [Create a social media list with icon fonts](index.html#listIcons)
+          * [Create social media links with just icon fonts](index.html#icons)
+          * [Add metadata](index.html#metadata)
+          * [Add a profile image](index.html#profileImage)
+          * [Hover effects](index.html#hoverEffects)
+          * [Update typography & spacing styles](index.html#typographySpacing)
+      </script>
+    </section>
+
+    <section id="devTools" class="slide" data-markdown>
       <script type="text/template">
         ##Chrome Dev Tools
 
-        You can view the source of any web page by right-clicking (or two-finger tap) on *any* web page! Go to http://ladieslearningcode.com and view the source. That's HTML.
+        [Back to Extras]()
+
+        You can view the source of any web page by right-clicking (or two-finger tap) on *any* web page and select **View Web Source**! Go to http://ladieslearningcode.com (or any other site) and view the source. That's HTML.
 
         **Chrome Developer tools** take it a step further and allows us to *inspect* any web page making it easier to test and debug code. The tools can be accessed in 3 ways:
 
-        * right-click / two-finger tap on a web page and select **Inspect Element**
-        * select the menu icon ![](framework/img/workshop/menu-icon-chrome.png) in the top right hand corner and select **Tools > Developer Tools**
+        * right-click / two-finger tap on a web page and select **Inspect Element** OR
+        * select the menu icon in the top right hand corner and select **Tools > Developer Tools** OR
         * keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
 
         More about dev tools:<!-- .element: class="footnote" --> http://discover-devtools.codeschool.com <br>
@@ -1364,10 +1383,22 @@ height: 100px;</textarea>
       </script>
     </section>
 
+    <section id="listIcons" class="slide" data-markdown>
+      <script type="text/template">
+        ##Add a social media list with Icon Fonts
+
+        [Back to Extras]()
+
+        Add a list of links to your social media accounts and/email like this:
+
+        ![](framework/img/workshop/social-media-list.png)
+        </script>
+    </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Lists 
+        ##Add a social media list with Icon Fonts
+        ###Lists 
 
         Ordered Lists are used for a items that should be displayed in a specific, numbered order. Two tags are required, (`<ol>`) and (`<li>`) to create the list. You can only put content within the `li` tags (list item), **not** the `ol` (ordered list). 
 
@@ -1416,29 +1447,71 @@ height: 100px;</textarea>
         </div>
       </script>
     </section>
+    
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Exercise #5: Add social media/contact list (10mins)
+        ##Add a social media list with Icon Fonts
 
-        Add a list of links to your social media accounts and/email.  We can use an unordered list since the order doesn&#39;t matter.
-
-        Be sure to nest the links (`<a>`) *inside* of the list item (`<li>`) as well. For emails, see the example below.  Note that the `href` value is different.  This syntax will automatically open the users email client when they click on the link.
+        For your list of links to your social media accounts and/email, use an unordered list since the order doesn&#39;t matter. Be sure to nest the links (`<a>`) *inside* of the list item (`<li>`) as well.
 
         Example:
         ```
-        <ul>
+        <ul class="social">
           <li><a href="mailto:me@email.com">me@email.com</a></li>
           <li><a href="https://twitter.com">Twitter</a></li>
         </ul>
         ```
-        Your page should look something like this:
+        Remove the default bullet points and padding with CSS.
 
-        ![](framework/img/workshop/exercise-5.png)
+        ```
+        .social {
+          list-style-type: none;
+          padding: 0;
+        }
+        ```
 
-        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex5.html](project/examples/index-ex5.html)
+        Add some flair with icon fonts! Check out Font Awesome&#39;s Getting Started guide here: <http://fortawesome.github.io/Font-Awesome/get-started/>
+        
       </script>
     </section>
-    <section class="slide" data-markdown>
+
+    <section id="icons" class="slide" data-markdown>
+      <script type="text/template">
+        ##Create social media links with Icon fonts
+
+        [Back to Extras]()
+
+        Add icons to your social media accounts and/email like this:
+
+        ![](framework/img/workshop/social-icons-only.png)
+        
+        ```
+        <div class="social-horizontal">
+          <a href="https://twitter.com"><i class="fa fa-twitter" title="Twitter"></i></a>
+          <a href="http://linkedin.com"><i class="fa fa-linkedin" title="LinkedIn"></i></a>
+          <a href="http://instagram.com"><i class="fa fa-instagram" title="Instagram"></i></a>
+          <a href="http://facebook.com"><i class="fa fa-facebook" title="Facebook"></i></a>
+        </div>
+        ```
+
+        ```css
+        /* Social links with only icon fonts */
+        .social-horizontal {
+          text-align: center;
+        }
+        .social-horizontal a {
+          display: inline-block;
+          padding: 20px;
+          margin: 10px;
+        }
+        .social-horizontal i {
+          font-size: 100px;
+        }
+        ```
+      </script>
+    </section>
+
+    <section id="metadata" class="slide" data-markdown>
       <script type="text/template">
       ##Metadata
 
@@ -1463,6 +1536,29 @@ height: 100px;</textarea>
       More info about meta tags<!-- .element: class="footnote" --> [here](https://support.google.com/webmasters/answer/79812?hl=en).
       </script>
     </section>
+
+    <section id="profileImage" class="slide" data-markdown>
+      <script type="text/template">
+          ##Add a profile image
+
+          how to add images info
+      </script>
+    </section>
+
+    <section id="hoverEffects" class="slide" data-markdown>
+      <script type="text/template">
+          ##Hover effects
+      </script>
+    </section>
+
+    <section id="typographySpacing" class="slide" data-markdown>
+      <script type="text/template">
+          ## Update fonts and spacing styles
+
+          links back to typography and padding/margin slides
+      </script>
+    </section>
+
     <section class="slide" data-markdown>
       ##Getting your site online
 
