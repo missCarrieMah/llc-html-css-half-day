@@ -13,6 +13,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 22px;
+  line-height: 1.4;
   background: url(../images/6.jpg) no-repeat fixed;
   background-size: cover;
 }

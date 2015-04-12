@@ -54,8 +54,8 @@
       <img class="logo" src="framework/img/logo-llc-white.png" alt="Ladies Learning Code logo">
       <div class="info">
         <h1 class="heading-bg">
-          <span>Intro to HTML & CSS</span><br>
-          <!-- <span>Second line if title is long</span> -->
+          <span>Intro to HTML & CSS:</span><br>
+          <span>Build a one page website</span>
         </h1>
         <h2><span>with</span> Instructor Name</h2>
 
@@ -68,14 +68,10 @@
       </div>
     </section>
     
-    <section class="slide centered project">
-      <h2>Today’s Project</h2>
+    <section class="slide title">
+      <h1>Today’s Project</h1>
 
-      <p>Follow this <a href="http://ladieslearningcode.github.io/llc-html-css-multi-page-site/project/final/">link</a> to see the whole project!</p>
-
-      <!-- <img src="framework/img/workshop/project1.jpg" alt="project home page" title="">
-      <img src="framework/img/workshop/project2.jpg" alt="project about page" title="">
-      <img src="framework/img/workshop/project3.jpg" alt="project contact page" title=""> -->
+      <h2>Go <a href="project/final.html">here</a> to see the whole project</h2>
 
       <div class="presenter-notes" style="text-align:left;">
         <p>It might be helpful to leave the final project open in an extra tab to be able to refer to it throughout the day to show what each exercise is trying to work towards. Though each exercise also has its own example as well.</p>
@@ -88,11 +84,12 @@
 
         Choose a modern web browser, like [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/), that supports current web standards and has good development tools.
 
-You can write code using your computer's default text editor, Notepad (Windows) or TextEdit (Apple), but choosing a text editor with colour highlighting and other helpful features will improve your work flow.
+        You can write code using your computer's default text editor, Notepad (Windows) or TextEdit (Apple), but choosing a text editor with colour highlighting and other helpful features will improve your work flow.
 
-There are many free and paid [options](http://en.wikipedia.org/wiki/List_of_HTML_editors). Today, we're going to use [Sublime Text](http://www.sublimetext.com/). 
+        There are many free and paid options like [Text Wrangler](http://www.barebones.com/products/textwrangler/) or [Atom](https://atom.io).  
+        Today, we're going to use [Sublime Text](http://www.sublimetext.com/). 
 
-Improve your work flow with keyboard shortcuts. [Link to shortcut cheatsheet] TODO
+        Improve your work flow with [keyboard shortcuts](shortcuts-cheatsheet.html). TODO
       </script>
     </section>
     
@@ -180,7 +177,7 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
 
         `<!DOCTYPE html>` is the doctype for HTML5 (the latest version of HTML).
 
-        Here's what the previous version (XHTML) looks like.  HTML5 is much neater!
+        Here's what the previous version's doctype (XHTML) looks like.  HTML5 is much neater!
 
         ```
         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -206,51 +203,40 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
         ```
         **&lt;html>** - Identifies the document as HTML. The `lang="en"` attribute is optional but recommended since it classifies the language and can be used for translation tools and improve quality of search results.
 
-        **&lt;head>** - Contains info about the current page (more on this later). `<title>` must be included and defines the page title, which is then displayed in the browser toolbar, bookmarks and search engine results.
+        **&lt;head>** - Contains info about the current page (more on this later). `<title>` must be included to define the page title. This is displayed in the browser toolbar, bookmarks and search engine results.
 
         **&lt;body>** - All content to be displayed in the browser window, also known as the viewport, goes here.
 
-        TODO - something about family tree relationship
+        Note the indentation of the code.  Every nested element becomes a descendant element, creating a family tree-like structure of parent/child nodes, siblings, anscestors and descendants.
       </script>
     </section>
 
     <section class="slide" data-markdown>
-## Setting Up Your Work Flow
-
-Inside of the folder you downloaded today (**llc-html-css**), there are many folders and files that contain different content.
-
-```xml
-llc-html-css-  TODO
-  |-- framework (folder) // Contains files needed for slide presentation. Do not edit!
-  |-- project (folder) // All the project files needed for today go in here
-  |-- index.html // This is the file you are viewing right now. Do not edit!
-```
-
-For all of these commands (open, save, copy, etc), refer to your [keyboard shortcuts cheat sheet](shortcuts-cheatsheet.html) or follow the instructions below.
-
-1. Open Sublime Text and go to **File > Open**.
-1. Navigate to the **project** folder (inside the folder you downloaded with today's slides).  
-With the entire folder selected, select **Open**. The folder will appear in the side bar.
-    </section>
-
-    <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #1: Create your HTML page
+        ## Setting Up Your Work Flow 
 
-        To create a web page, just name your file using the **.html** extension (just like .pdf for PDF files or .doc for Word files). It's good practice to name your home page as **index.html** because your web server maps to this file as its default page.
+        ```xml
+        llc-html-css-half-day-master
+          |-- framework (folder) // Contains files needed for this slide presentation. Do not edit!
+          |-- project (folder) // All the project files needed for today go in here
+          |-- slides.html // This is the file you are viewing right now. Do not edit!
+        ```
 
-        (Remember, you can refer to your<!-- .element: class="footnote" --> [keyboard shortcuts cheat sheet](shortcuts-cheatsheet.html) for these commands.)
+        For many basic commands (open, save, copy, etc), refer to your <!-- .element: class="footnote" -->[keyboard shortcuts cheat sheet](shortcuts-cheatsheet.html) or follow the instructions below.
 
-        1. In Sublime, select **File > New File** to create a new file.
-        1. Select **File > Save** to save & name your file.  Name it **index.html** and save it in the **project** folder.
-        1. Let's add all of the basic HTML tags (hint: [Slide 9](index.html#slide9)) and save your changes.
-        1. Right click or two-finger tap in Sublime and select **Open in Browser** to open the HTML file in your *default* browser. 
+        1. Open Sublime Text and go to **File > Open**.
+        1. Navigate to the **project** folder, highlight it and select **Open**.
+        1. Open **index.html** by double clicking on the file to open your starter project file.
+        1. Right-click/two-finger tap anywhere on the file and select **Open in Browser** to open the HTML file in your *default* browser.
+        1. Update the line `<h1>Your Name here</h1>`, save the file & refresh the browser. 
+
+        This is your editing workflow. 
+
+        See the difference between what you see in the editor and browser? Let&#39;s talk more about HTML tags.
 
         If Chrome is not your default browser, go to your Window/Finder and navigate to the<!-- .element: class="footnote" --> **project** folder, right-click/two-finger tap on **index.html** and choose **Open With > Chrome**
 
-        File naming tips: use lowercase letters, avoid spaces and use dashes or underscores for multi-word file names (e.g. about-me.html).<!-- .element: class="footnote" -->
-
-        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex1.html](project/examples/index-ex1.html)
+        To create a web page, files are name with an <!-- .element: class="footnote" -->**.html** extension (just like .pdf for PDF files or .doc for Word files). It&#39;s good practice to name your home page as **index.html** because your web server maps to this file as its default page.
       </script>
     </section>
 
@@ -258,11 +244,11 @@ With the entire folder selected, select **Open**. The folder will appear in the 
       <script type="text/template">
         ##Planning the page layout
 
-        An important part of creating a web page is planning how to structure the page using semantic markup and getting it ready to be styled by CSS.  You will likely make changes as you go along but it makes it easier to start with a basic page layout.
+        An important part of creating a web page is planning how to structure the page.  Though you will likely make changings as you go along, creating a basic structural layout with *semantic* markup is a good way to start.
 
-        If you don't have design to work from, many developers and designers like to start planning with a simple sketch. But for today, let's take a look at the final design and see how to group related elements to structure the page.
+        If you don't have a design to work from, many developers and designers like to start planning with a simple sketch. But for today, let's take a look at the final design to see how to group related elements and create a page structure.
 
-        There are many structural HTML tags that are used just for this purpose.
+        There are many *structural HTML tags* that are used just for this purpose.
 
         ![final design sections](framework/img/workshop/project-final-sections.jpg)
       </script>
@@ -272,9 +258,9 @@ With the entire folder selected, select **Open**. The folder will appear in the 
       <script type="text/template">
         ##Structural HTML tags
 
-        The `<div>` tag is one of two HTML tags that has no semantic meaning. (`<span>` is the other.) It is used purely for grouping elements to create sections for laying out a page.
+        The `<div>` tag is one of two HTML tags that has no semantic meaning. (`<span>` is the other.) It is used purely for grouping elements together for styling.
 
-        `<div>` tags are often used with the `class` attribute to differentiate them (more on this later).  To create the page layout, the HTML could look something like this:
+        `<div>` tags are often used with the `class` attribute to differentiate them (more on `class` later).  To create the page layout, the HTML could look something like this:
 
         ```xml
         <div class="nav">
@@ -336,7 +322,7 @@ With the entire folder selected, select **Open**. The folder will appear in the 
       </script>
     </section>
 
-    <section class="slide" data-markdown>
+   <!--  <section class="slide" data-markdown>
       <script type="text/template">
         ##Class Exercise #2: Page structure
 
@@ -346,13 +332,11 @@ With the entire folder selected, select **Open**. The folder will appear in the 
 
         We can also use HTML comments to help organize the content.  The syntax is:
 
-        ```xml
-        <!-- comment goes in between here -->
-        ```
+     
 
-        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex2.html](project/examples/index-ex2.html)
+        Example for reference: [project/examples/index-ex2.html](project/examples/index-ex2.html)
       </script>
-    </section>
+    </section> -->
     
     <section class="slide title" data-markdown>
       #Adding content
