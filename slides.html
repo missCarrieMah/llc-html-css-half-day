@@ -350,7 +350,8 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
         ```xml
         <p>This is a paragraph.</p>
         ```
-        ---
+        
+        <br>
         There are six page headings tags ranging from `<h1>` to `<h6>`. Headings are used to describe the *hierarchy* of the page structure. Think about how you would arrange an essay outline.
 
           **Title** (`h1`) 
@@ -371,7 +372,7 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
       <script type="text/template">
           ##Headings & HTML5 Sectioning tags
 
-          Prior to HTML5, the rule was to only use one `<h1>` per page.  With the introduction of HTML5 sectioning tags, each part of the document that uses a sectioning tag now gets its own outline.
+          Prior to HTML5, generally only one `<h1>` was used per page.  With the introduction of HTML5 sectioning tags, each part of the document that uses a sectioning tag now gets its *own* outline.
 
           Read more about headings and HTML5<!-- .element: class="footnote" --> [here](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document) and [here](http://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824).
 
@@ -409,26 +410,28 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Exercise #3: Add Content (10mins)
+        ##Exercise #1: Add Content (10mins)
 
         Add in some basic content listed in the instructions below.  Your page will look similar to this:
 
         ![](framework/img/workshop/exercise-3.png)
 
-        Code example<!-- .element: class="footnote" --> [project/examples/index-ex3.html](project/examples/index-ex3.html)
+        Example:<!-- .element: class="footnote" --> [project/examples/basic-html.html](project/examples/basic-html.html)
 
-        1. Add a heading tag to your `<header>` section for your name. (Leave the navigation blank for now.)
+        1. Add your name in the `<header>` section if you haven&#39;t already. (Leave the navigation blank for now.)
         1. In the **About** section, add a heading and a couple paragraphs.
         1. Add a quote/heading into the **Extras** section.
-        1. In the **Footer/Contact**, add a heading and a paragraph.
+        1. In the **Footer**, add a heading and a paragraph.
 
         <div class="footnote">
           Don&#39;t know what content to add? Use placeholder text!
           <br>
-          http://meettheipsums.com, http://thewireipsum.com, http://www.quotes.net, http://blokkfont.com (blokkfont.com an nice design alternative but make sure you have some actual text on your page to style later.)
+          http://meettheipsums.com <br>
+          http://thewireipsum.com <br>
+          http://www.quotes.net <br>
+          http://blokkfont.com <br>
+          (blokkfont.com an nice design alternative but make sure you have some actual text on your page to style later.)
         </div>
-        
-        
       </script>
     </section>
 
@@ -477,7 +480,7 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Exercise #4: Add links and navigation (10mins)
+        ##Exercise #2: Add links and navigation (10mins)  - 50mins TODO
 
         Even though we&#39;re building a one-page website, we can still create a navigation and set the links to different parts of the page.
 
@@ -489,17 +492,15 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
           <p><a href="http://hbo.com/the-wire" target="_blank">Link example</a> in a paragraph.</p>
           <p>Another paragraph. Lorem ipsum dolo sit amet, consectetur adipisicing elit laboriosam officia.</p>
           ```
-          We currently don&#39;t have much content so the in page links won&#39;t jump to the page section if the content isn&#39;t long enough to scroll. Either, minimize the height of your browser or test it again when we add more content and styles.  It should look something like this:
+          We currently don&#39;t have much content so the page links won&#39;t jump to the page section if the content isn&#39;t long enough to scroll down. Either, minimize the height of your browser or test it again when we add more content and styles.  It should look something like this:
 
           ![](framework/img/workshop/exercise-4.gif)
-        1. Add your email link in the contact section.
+        1. Add your email link in the footer section.
 
-        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex4.html](project/examples/index-ex4.html)
+        Example for reference:<!-- .element: class="footnote" --> [project/examples/basic-links.html](project/examples/basic-links.html)
       </script>
     </section>
     
-    
-
     <section class="slide title" data-markdown>
       <script type="text/template">
         #Time for CSS!
@@ -513,7 +514,7 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
           CSS is a stylesheet language with its own syntax rules. It separates content from presentation. A style sheet contains a list of style rules.
 
           **Selectors:** used to determine which HTML element(s) to apply the styles to.  
-          **Declarations:** style rules, written using `property: value` pairs, are wrapped by curly brackets `{}` and each must end with a semi-colon (;) to indicate that the instruction is complete.
+          **Declarations:** style rules, written using `property:value` pairs, are wrapped by curly brackets `{}` and each must end with a semi-colon `;` to indicate that the instruction is complete.
 
           ```css
           selector {
@@ -531,9 +532,11 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
       </script>
     </section> 
 
-    <section class="slide title" data-markdown>
+    <section class="slide centered" data-markdown>
       <script type="text/template">
-          ##CSS is all about breaking stuff and putting it back together the way we want it to be.
+        ##CSS: Breaking stuff and putting it back together
+
+        ![](framework/img/workshop/css.gif)
       </script>
     </section>
 
@@ -541,46 +544,18 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
       <script type="text/template">
         ##Referencing CSS
 
-        There are three ways to include (a.k.a *reference*) CSS in an HTML page. Today we&#39;ll be using the recommended **external** method. This method links to a separate style sheet file (uses a `.css` file extension) to separate the CSS from the HTML document.
+        There are several ways to include CSS in an HTML page. Today we&#39;ll be using the **external** method which links to a separate style sheet file (uses a `.css` file extension) to separate the CSS from the HTML document.
 
         The style sheet is referenced in the `<head>` of the document with a `<link>` tag and two **attributes**, `rel` (relationship) and `href`. The value of `href` points to the file location of the style sheet. 
 
-        Though it is not required, css files are often saved in a separate css folder for organization, so make sure the file path points to the appropriate directory.
-
+        Though not required, css files are often saved in a separate css folder for organization, so make sure the file path points to the appropriate directory.
         ```
         <head>
           <title>Page Title</title>
           <link rel="stylesheet" href="css/style.css">
         </head>
         ```
-        <br>
-        If you're curious, you can read more about the inline and internal referencing methods below:
-
-        **INLINE**: Can be added to any HTML element using the `style` *attribute*.
-
-        ```
-        <p style="color:blue;">I'm writing CSS!</p>
-        ```
-
-        This technique is not as common because it's harder to maintain but it's good to know how it works, just in case.
-
-        **INTERNAL**: Uses `<style>` and is included in the `<head>` element.
-
-        ```    
-        <head>
-            <title>Page Title</title>
-            <style>
-                h1 {
-                    font-size: 16px;
-                }
-            </style>
-        </head>
-        <body>
-            <p>paragraph</p>
-        </body>
-        ```
-
-        This method is preferred over *inline* css, however it is still inefficient because if you had multiple web pages, the style block and any revisions would have to be replicated on every single page.
+        Read more about the difference ways to reference CSS <!-- .element: class="footnote" -->[here](http://reference.sitepoint.com/css/linkingcss).        
       </script>
     </section> 
 
@@ -590,12 +565,13 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
 
         Back in Sublime Text, create a new CSS file by selecting **File > New File** or use a [keyboard shortcut](shortcuts-cheatsheet.html). Name the file with a **.css** extension. Let&#39;s call it **styles.css** and add it to **index.html**.
 
-        PRO TIP! Sublime Text has a shortcut.  Type "link" with no brackets, then the tab key. Voila!<!-- .element: class="footnote" -->
+        <p class="footnote">**PRO TIP!** Sublime Text has a shortcut.  Type "link" with no brackets, then the tab key. Voila!</p>
 
         ```
         <link rel="stylesheet" href="css/styles.css">
         ```
 
+        <br>
         Let&#39;s do a quick test to see if it is linked properly by adding a background color on the entire viewport.
 
         ```
@@ -608,20 +584,20 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##CSS colours
+          ##CSS colours - 1 hr TODO
 
           **keywords** - use the actual name (e.g. `red`, `green`, `blue`, `pink`, `papayaWhip`, `paleGoldenrod`, etc)
 
-          **RGB (red-green-blue)** - uses 3 numerical values from `0`-`255`. `0` represents black, `255` represents white 
+          **RGB (red-green-blue)** - uses 3 numerical values between `0` (represents black) and `255` (represents white) 
 
           **hex code** - number sign (`#`) followed by six hexadecimal characters (0-9, A-F)
           
           ```
-          /* These are all the same colour */
+          /* These are all the same colour - this is a CSS comment by the way! */
           p {
             background: firebrick;
-            background: #B22222;
             background: rgb(178,34,34);
+            background: #B22222;
           }
           ```
 
@@ -642,12 +618,10 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
       <script type="text/template">
         ##Background images
 
-        The `background` property can be used to add colours or background images. There are already a few to choose from in your project images folder.
-
-        There are two ways to declare the `background` property. The value must inclue the file path to the the image file.
+        The `background` property can be used to add colours or background images. There are two ways to declare the `background` property. The value must inclue the file path to the the image file.
 
         ```css
-        /* shorthand - this is a CSS comment by the way!*/
+        /* shorthand */
         background: url(path/to/image/file);
         ```
         ```css
@@ -655,7 +629,7 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
         background-image: url(path/to/image/file);
         ```
 
-        **Important:** Note the location of the CSS file.  Since it&#39;s inside of a folder, we need to adjust the file path to reflect that using `../` to indicate that the directory needs to move *up* and *out* of the containing folder.
+        **Important:** Note the location of the CSS file.  Since it&#39;s inside of a folder, we need to adjust the file path to reflect that, using `../` to indicate that the directory needs to move *up* and *out* of the containing folder.
 
         ```css
         background: url(../path/to/image/file);
@@ -665,9 +639,10 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #5: Background styles
+        ##Class Exercise #3: Background styles
 
-        Add a background image to the `<header>` section. There are a few options in the images folder in your projects to choose from for now.
+        Add a background image to the `<header>` section.   
+        There are a few options in the images folder: **project > images**.
 
         ```
         header {
@@ -688,9 +663,9 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
       <script type="text/template">
         ##Default HTML styles
         
-        HTML comes with default styles such as different heading sizes, font weights and font sizes. HTML also has default spacing on many of its elements as well.  Notice how there&#39;s a space between the paragraphs and headings too? We can change all of this with CSS.
+        HTML comes with default styles such as different heading sizes, font weights and sizes as well as default *spacing*.  Notice the space between the paragraphs and headings? This can be changed with CSS.
 
-        The browser looks at every HTML element on the page as a rectangular box. The CSS **Box Model** describes the way CSS styles the size and spacing of HTML elements.
+        The browser looks at every HTML element on the page as a rectangular/square box. The **CSS Box Model** describes the way CSS styles the size and spacing of HTML elements.
 
         There are some funny quirks with the box model sizing.  In short, adding the CSS snippet below to your CSS file will fix those quirks. See more about The Box Model [here](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
 
@@ -709,6 +684,7 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
     <section class="slide" data-markdown>
       <script type="text/template">
         ##Margin and Padding
+
         `margin` - adds/removes space **outside** of the element  
         `padding` - adds/removes space **inside** of the element  
 
@@ -734,7 +710,7 @@ The [World Wide Web Consortium](http://www.w3.org/TR/html5/) (W3C) governs these
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Practice!
+        ##Practice! 1:15 TODO
 
         Practice changing the margin and padding example below with 1 to 4 values.
 
@@ -749,9 +725,13 @@ margin: 0px;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #6: Update the page spacing
+        ##Class Exercise #4: Update the page spacing
 
-        Notice that the content doesn&#39;t quite go to the edge of the page? That&#39;s because there&#39;s default spacing in the `body` element (as well as many other elements). Remove the test background color and replace it with `padding` and `margin` to reset the value. Save and check the changes in the browser.
+        Notice that the content doesn&#39;t quite go to the edge of the page? 
+
+        ![](framework/img/workshop/exercise-spacing.png)
+
+        That&#39;s because there&#39;s default spacing in the `body` element (as well as many other elements). Remove the test background color and replace it with `padding` and `margin` to reset the value. Save and check the changes in the browser.
 
         ```
         body {
@@ -759,28 +739,43 @@ margin: 0px;</textarea>
           margin: 0;
         }
         ```
-        Also, add some padding to the header and center align the text. You can adjust this padding value later when we change font sizes.
-
-        ```
-        header {
-          background: url(../images/baltimore-rowhouses.jpg);
-          text-align: center;
-          padding: 150px 0;
-        }
-        ```
-        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex6.html](project/examples/index-ex6.html) and [project/examples/css/styles-ex6.css](project/examples/css/styles-ex6.css)
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #7: Background Images, Part 2
+        ##Class Exercise #4: Update the page spacing
+
+        Add some padding to the header and center align the text. 
+
+        ```
+        header {
+          background: url(../images/baltimore-rowhouses.jpg);
+          text-align: center;
+          padding: 150px 0; /* top & bottom, left & right */
+        }
+        ```
+
+        Now the background image runs all the way to the edge of the page.  
+
+        ![](framework/img/workshop/exercise-8-bgrepeat.jpg)
+
+
+        Example:<!-- .element: class="footnote" --> [project/examples/page-spacing.html](project/examples/page-spacing.html) and [project/examples/css/page-spacing.css](project/examples/css/page-spacing.css)
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Class Exercise #5: Background Images, Part 2 - TODO 1.5hrs
 
         If the image is smaller than the width of your browser window, the image will repeat by default.
 
         ![](framework/img/workshop/exercise-8-bgrepeat.jpg)
 
-        Let's add three more values: `no-repeat`, `cover` and `fixed`.  The end code will look like this:
+        Let's add three more values: `no-repeat`, `fixed` and `cover`.   Let's add this to our project, one value at a time, to see what each one does. Try scrolling and minimizing and maximizing your browser window!
+
+        The end code will look like this:
         
         ```
         header { /* longhand */
@@ -798,8 +793,6 @@ margin: 0px;</textarea>
         ```
 
         Note that <!-- .element: class="footnote" -->`background-size` is the longhand property. To include it in the shorthand style, it **must** be included after `background-position`, separated with the `/` character. If no background position value is used, background-size won’t work in the shorthand style so in this case, it may be less error prone to just add it via the longhand property. More about background [here](https://css-tricks.com/almanac/properties/b/background/) and [here](http://www.carsonshold.com/2013/02/css-background-sizecover-doesnt-like-fixed-positioning/).
-
-        Let's add this to our project, one value at a time, to see what each one does. Try scrolling and minimizing and maximizing your browser window!
       </script>
     </section>
 
@@ -809,12 +802,12 @@ margin: 0px;</textarea>
 
           ###Optional exercises
 
-          1. Double check your code.  You can check your code against [project/examples/index-ex7.html](project/examples/index-ex7.html) and [project/examples/css/styles-ex7.css](project/examples/css/styles-ex7.css)
+          1. Double check your code.  You can check your code against [project/examples/backgrounds.html](project/examples/backgrounds.html) and [project/examples/css/backgrounds.css](project/examples/css/backgrounds.css)
 
           1. Find your own background images.  Here&#39;s a resource for a list of free stock photography sites:
             https://medium.com/@dustin/stock-photos-that-dont-suck-62ae4bcbe01b
 
-          1. Find two fonts to use in your project.  Two different fonts are recommended.  The LLC project example uses [Roboto](http://www.google.com/fonts/specimen/Roboto) and [Satisfy](http://www.google.com/fonts/specimen/Satisfy). 
+          1. Find two fonts to use in your project.  The LLC project example uses [Roboto](http://www.google.com/fonts/specimen/Roboto) and [Satisfy](http://www.google.com/fonts/specimen/Satisfy). 
 
           Today we&#39;ll be using a free service provided by Google Fonts: http://www.google.com/fonts
       </script>
@@ -849,7 +842,7 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         ##Inheritance and Specificity
 
-        One of the strengths of CSS is styles can be inherited from parent to child elements using a family tree relationship between the elements.
+        One of the strengths of CSS is styles can be inherited from parent to child elements using the family tree relationship between the elements.
 
         ```
         <body>
@@ -867,15 +860,15 @@ text-transform: lowercase;</textarea>
         }
         ```
 
-        In the above example, the CSS properties in the body selector is inherited by the children and descendants so all the text would be blue and display the Helvetica font. However, when a more specific selector is used (`h1`), it overrides the inherited values because it&#39;s more *specific*.
+        In the above example, the CSS properties in the body selector is inherited by the descendants elements (all nested elements). All text will be blue and display the Helvetica font. However, when a more specific selector is used (e.g. `h1`), it overrides the inherited values because it&#39;s more *specific*.
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Class Exercise #8: Typography
+        ##Using Google Fonts
 
-        Services like [Google Fonts](http://www.google.com/fonts) make it easier to add variety to your font choices. Google Fonts allows you to link directly to their hosted stylesheet and fonts making it available to all users that visit your site.
+        Services like [Google Fonts](http://www.google.com/fonts) make it easier to add variety to your font choices. Google Fonts allows you to link directly to their hosted files making it available to all users that visit your site.
 
         1. Select the fonts you want to use and **Add to Collection**.<br>
           <span class="footnote">(The LLC project uses Roboto and Satisfy. Some other good ones are Open Sans and Pacifico.)</span>
@@ -891,55 +884,55 @@ text-transform: lowercase;</textarea>
     
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Class Exercise #8: Typography (continued)
+        ##Class Exercise: Typography (continued)
 
-          (Make sure the Google Font stylesheet has been added to your HTML page to use the fonts on website.)<!-- .element: class="footnote" --> 
+        (Make sure the Google Font stylesheet has been added to your HTML page to use the fonts on website.)<!-- .element: class="footnote" --> 
 
-          Let&#39;s add the base font to the `body` element, so all the descendant elements can inherit this style.  You can change the `font-weight` too.
+        Let&#39;s add the base font to the `body` element, so all the descendant elements can inherit this style.  You can change the `font-weight` too.
 
-          ```
-          body {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-          }
-          ```
+        ```
+        body {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300;
+        }
+        ```
 
-          Now let&#39;s make all the `<h1>` headings in the page have the same styles too. 
+        Now let&#39;s make all the `<h1>` headings in the page have the same styles too. 
 
-          ```
-          h1 {
-            font-size: 50px;
-            font-family: 'Satisfy', cursive;
-          }
-          ```
+        ```
+        h1 {
+          font-size: 50px;
+          font-family: 'Satisfy', cursive;
+        }
+        ```
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Class Exercise #8: Typography (continued)
+        ##Class Exercise: Typography (continued)
 
-          What if you want the `h1` in the `header` to look different than all the other `h1` tags? You can use a **descendant selector** to specifically select a tag within another tag.
+        What if you want the `h1` in the `header` to look different than all the other `h1` tags? You can use a **descendant selector** to specifically select a tag within another tag.
 
-          ```xml
-          <header id="home">
-            <h1>Kima Greggs</h1>
-          </header>
-          ```
+        ```xml
+        <header id="home">
+          <h1>Kima Greggs</h1>
+        </header>
+        ```
 
-          ```
-          h1 {
-            font-size: 50px;
-            font-family: 'Satisfy', cursive;
-          }
-          header h1 { 
-            font-size: 150px;
-          }
-          ```
+        ```
+        h1 {
+          font-size: 50px;
+          font-family: 'Satisfy', cursive;
+        }
+        header h1 { 
+          font-size: 150px;
+        }
+        ```
 
-          `header h1` is more specific so it will override the `font-size` in the `h1` declaration.
+        `header h1` is more specific so it will override the `font-size` in the `h1` declaration.
 
-          Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex8.html](project/examples/index-ex8.html) and [project/examples/css/styles-ex8.css](project/examples/css/styles-ex8.css)
+        Example for reference:<!-- .element: class="footnote" --> [project/examples/typography.html](project/examples/typography.html) and [project/examples/css/typography.css](project/examples/css/typography.css)
       </script>
     </section>
 
@@ -962,22 +955,24 @@ text-transform: lowercase;</textarea>
         }
         ```
 
-        You can skip a level but specificity rules still apply. For example, `nav ul li a` would override `nav a` because it&#39;s more specific. It&#39;s usually easier to start with generic selectors and make them more specific, as needed.
+        You can skip a level but specificity rules still apply. For example, `nav ul li a` would override `nav a` because it&#39;s more specific. 
+
+        It&#39;s generally better to start with generic selectors and make them more specific, as needed.
       </script>
     </section>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Exercise #9: Background styles & z-axis
+        ##Exercise: Background styles & z-axis
         
-        Everytime an HTML element is nested, the elements are stacked in layers, kind of like a sandwich!
+        Every time an HTML element is nested, the elements are stacked in layers, kind of like a sandwich!
         
         Image source and further reading<!-- .element: class="footnote" --> [here](http://www.smashingmagazine.com/2009/09/15/the-z-index-css-property-a-comprehensive-look/).
 
         ![](framework/img/workshop/graphical-z-index.gif)<!-- .element: class="col-narrow" -->
 
         <div class="col-wide delayed">
-          If a background image/colour is added to `body`, it will appear behind the `header`. 
+          If a background image/colour is added to `body`, it will appear *behind* the `header`. 
         <pre>
 
         ```
@@ -991,11 +986,10 @@ text-transform: lowercase;</textarea>
 
         Next, add a background colour to the Nav, About and Footer<!-- .element: class="delayed" --> <span class="footnote">(the LLC project uses #111111)</span>. Change the font color (if needed).
 
-        How come the font color for the links didn&#39;t change?<!-- .element: class="delayed" -->
-
-        Change the font colour for the links<!-- .element: class="delayed" --> <span class="footnote">(the LLC project uses #8c9d87)</span>
-
-        Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex9.html](project/examples/index-ex9.html) and [project/examples/css/styles-ex9.css](project/examples/css/styles-ex9.css)
+        <div class="delayed">
+          Change the font colour for the links.<!-- .element: class="delayed" --> <span class="footnote">(the LLC project uses #8c9d87)<br>
+          Ex. [project/examples/background-z-axis.html](project/examples/background-z-axis.html), [project/examples/css/background-z-axis.css](project/examples/css/background-z-axis.css)</span>
+        </div>
       </script>
     </section> 
 
@@ -1003,7 +997,7 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         ##Class & ID attributes
         
-        HTML gives us two ways to attach extra identifying information to target specific elements with two **attributes**, `class` (can be used multiple times) and `id` (can only be used once per page).  
+        HTML gives us two ways to attach extra identifying information to target specific elements using two **attributes**: `class` (can be used multiple times) and `id` (can only be used once per page).  
 
         ```xml   
         <p>Regular text.</p>
@@ -1011,15 +1005,15 @@ text-transform: lowercase;</textarea>
         <p id="error">Will display a red border.</p>
         ```
 
-        Targets ALL paragraphs
+        Targets ALL paragraphs.
         ``` 
         p { color: blue; }
         ```
-        Only applies to any element that contains this class, defined by leading period 
+        Applies to any element that contains this class, defined by leading period.
         ```
         .error { color: red; }
         ```
-        Only applies to any element that contains this id, defined by number symbol 
+        Applies to any element that contains this id, defined by number/hash tag symbol. 
         ```
         #error { border: 1px solid red; }
         ```
