@@ -1199,22 +1199,23 @@ height: 100px;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-          ##Class Exercise #12: Create a logo
+          ##Class Exercise: Create a logo
 
           Let&#39;s create a simple logo using just CSS! 
 
           ![](framework/img/workshop/logo.png)
 
-          First, create a "box" to put the logo in. Since this is not a structural part of the page, use a `<span>` instead of a `<div>`. Also, add a class attribute to hook the CSS to it and add it to the `<nav>` section.
+          Often, a logo is used as another option for linking back to the home page (or in a one page example, the top of the page). Let&#39;s add another home link but add a class attribute, to hook specific CSS to it. 
 
           ```
           <nav>
-            <span class="logo">KG</span>
+            <a class="logo" href="#home">KG</a>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
           </nav>
           ```
+          (Another option is to just not have a "home" link as well.)<!-- .element: class="footnote" -->
       </script>
     </section>
 
@@ -1223,32 +1224,35 @@ height: 100px;</textarea>
         ##Create a logo (continued)
 
         1. Style the text.  Change the `font-family` and `font-size`. What selector should we use?
-          ```css
-          .logo {
+          <div class="delayed">
+          <pre><code>.logo {
               font-family: 'Satisfy', cursive;
               font-size: 28px;
           }
-          ```
-        1. Add a border around the initals.  
-          ```css
-          border: 2px solid #8c9d87; /* adds the border size, style and colour */
-          border-radius: 50%; /* turns the element into a perfect circle */
-          ```
-        1. Change it from an `inline` element to `inline-block` (best of both worlds) and add height and width. Height and width has to be the same to make sure the logo stays as a circular shape instead of an oval.
-          ```css
-          display: inline-block;
-          height: 70px;
+          </pre></code>
+          </div>
+        1. Add a border around the initals. Use <!-- .element: class="delayed" -->`border-radius` to make it rounded. 
+          <div class="delayed">
+          <pre><code>border: 2px solid #8c9d87;
+          border-radius: 50%;
+          </pre></code>
+          </div>
+        1. If you want the logo to be a perfect circle, add the same value to height and width. Set padding to 0 to override the padding values set for the other nav links. <!-- .element: class="delayed" -->
+          <div class="delayed">
+          <pre><code>height: 70px;
           width: 70px;
-          ```
-        1. Vertically align the initials in the circle and change the colour (since it will eventually be moved onto the dark background of the nav). There are many ways to vertically align elements. This is just one way.
+          padding: 0;
+          </pre></code>
+          </div>
+        1. Vertically align the initials in the circle. One way to achieve this is to set the<!-- .element: class="delayed" -->`line-height` to the same value as your `height` value. Then, set the text to center align to align it horizontally. 
 
-          Set the `line-height` to the same value as your `height` value. Then, set the text to center align to align it horizontally.
-
-          ```
-          line-height: 70px;
+          <div class="delayed">
+          <pre><code>line-height: 70px;
           text-align: center;
-          ```
-          Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex12.html](project/examples/index-ex12.html) and [project/examples/css/styles-ex12.css](project/examples/css/styles-ex12.css)
+          </pre></code>
+          </div>
+
+        Example:<!-- .element: class="footnote delayed" --> [project/examples/logo.html](project/examples/logo.html) and [project/examples/css/logo.css](project/examples/css/logo.css)
       </script>
     </section>
 
@@ -1279,14 +1283,14 @@ height: 100px;</textarea>
       <script type="text/template">
           ##Final stretch!
 
-          For our last exercise we're going to align the logo to the left and create a fixed nav.
+          For our last exercise we&#39;re going to align the logo to the left and create a fixed nav.
 
           First up, the logo.  Float it to the left and add some margin to move it away from the edge of the page.
 
           ```css
           .logo {
             float: left;
-            margin: 4px;
+            margin: 8px;
           }
           ```
 
@@ -1298,22 +1302,24 @@ height: 100px;</textarea>
           }
           ```
 
-          By default, when using positioning, the element automatically becomes the width of it's content.  That&#39;s why it looks like this: 
+          By default, when using positioning, the element automatically becomes the width of its content.  That&#39;s why it looks like this: 
 
           ![](framework/img/workshop/position-fixed.png)
 
-          When using `position`, it also unlocks 4 position specific properties: `top`, `right`, `bottom` and `left`.  For our nav, we want it to be at the top of the page, all the way to the left and all the way to the right.  Update the nav css to:
+          When using `position`, it also unlocks 4 position specific properties: `top`, `right`, `bottom` and `left`.  For our nav, we want it to be at the top of the page, all the way to the left and stretch all the way to the right.  
+
+          Update the nav css to:
           
           ```css
           nav {
             position: fixed;
             top: 0;
             left: 0;
-            right: 0;
+            right: 0; /* or set width: 100% */
           }
           ```
 
-          Example for reference:<!-- .element: class="footnote" --> [project/examples/index-ex13.html](project/examples/index-ex13.html) and [project/examples/css/styles-ex13.css](project/examples/css/styles-ex13.css)
+          Example for reference:<!-- .element: class="footnote" --> [project/examples/position.html](project/examples/position.html) and [project/examples/css/position.css](project/examples/css/position.css)
       </script>
     </section>
     
