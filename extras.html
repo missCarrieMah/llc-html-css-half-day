@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Ladies Learning Code</title>
+  <!-- Don't alter slideshow.css, CSSS slide deck needs it to work -->
+  <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
+
+  <!-- Theme-specific styles -->
+  <link href='http://fonts.googleapis.com/css?family=Quicksand%7CPacifico%7COpen+Sans:400italic,400,300' rel='stylesheet' type='text/css' data-noprefix>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="framework/css/highlightjs-themes/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/theme-llc.css" data-noprefix>
+  <link rel="shortcut icon" href="framework/img/favicon.ico"> 
+
+  <!-- Workshop-specific styles -->
+  <link rel="stylesheet" href="framework/css/workshop.css" data-noprefix>
+
+  <!-- Takes care of CSS3 prefixes! -->
+  <script src="framework/scripts/prefixfree.min.js"></script>
+
+  <!-- opens all links in a new window -->
+  <base target="_blank">
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+<body data-duration="360">
+  
+  <!-- Welcome slide -->
+  <header class="slide" data-markdown>
+    <script type="text/template">
+        ##Extras
+
+        Here are some additional resources, effects and content ideas to add to your site.
+
+        * [Chrome Developer Tools](extras.html#devTools)
+        * [Create a social media list with icon fonts](extras.html#listIcons)
+        * [Create social media links with just icon fonts](extras.html#icons)
+        * [Add metadata](extras.html#metadata)
+        * [Add a favicon](http://blog.teamtreehouse.com/how-to-make-a-favicon)
+        * Update typography & spacing styles: 
+           * http://learn.shayhowe.com/html-css/working-with-typography/
+           * [margin & padding](slides.html#margin-padding)
+        <!-- * [Getting your site online](extras.html#online) -->
+    </script>
+  </header>
+
+  <main>
+    <section id="devTools" class="slide" data-markdown>
+      <script type="text/template">
+        ##Chrome Dev Tools
+
+        You can view the HTML source of *any* web page. Right-clicking/two-finger tap any where on the browswer and select **View Web Source**.
+
+        **Chrome Developer tools** take it a step further and allows us to *inspect* any web page making it easier to test and debug code. The tools can be accessed in 3 ways:
+
+        Option 1: right-click / two-finger tap on a web page and select **Inspect Element**  
+        Option 2: select the menu icon in the top right hand corner and select **Tools > Developer Tools**   
+        Option 3: keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
+
+        More about dev tools:<!-- .element: class="footnote" --> http://discover-devtools.codeschool.com <br>
+        To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en).<br>
+        Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
+      </script>
+    </section>
+
+    <section id="listIcons" class="slide" data-markdown>
+      <script type="text/template">
+        ##Add a social media list with Icon Fonts
+
+        Add a list of links to your social media accounts and/email like this:
+
+        ![](framework/img/workshop/social-media-list.png)
+        </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Add a social media list with Icon Fonts
+        ###Lists 
+
+        Ordered lists are used for items that should be displayed in a specific, numbered order. Two tags are required, `<ol>` and `<li>`, to create the list. You can only put content within the `li` tags (list item), **not** the `ol` (ordered list). 
+
+        ```xml
+        <p>My top 5 tv shows:</p>
+        <ol>
+          <li>The Wire</li>
+          <li>Breaking Bad</li>
+          <li>Homeland</li>
+          <li>House of Cards</li>
+          <li>Game of Thrones</li>
+        </ol>
+        ```
+
+        Renders as:
+        <div class="example">
+          <p>My top 5 tv shows:</p>
+          <ol>
+            <li>The Wire</li>
+            <li>Breaking Bad</li>
+            <li>Game of Thrones</li>
+            <li>House of Cards</li>
+            <li>Homeland</li>
+          </ol>
+        </div>
+
+        Unordered lists are similar but start with the unordered list tag (`<ul>`). This list of items do not depend on any specific order.
+
+        ```xml
+        <ul>
+          <li>Home</li>
+          <li>Portfolio</li>
+          <li>Blog</li>
+          <li>Contact Me</li>
+        </ul>
+        ```
+
+        Renders as:
+        <div class="example">
+          <ul>
+            <li>Home</li>
+            <li>Portfolio</li>
+            <li>Blog</li>
+            <li>Contact Me</li>
+          </ul>
+        </div>
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        ##Add a social media list with Icon Fonts
+
+        For your list of links to your social media accounts and/email, use an unordered list since the order doesn&#39;t matter. Be sure to nest the links (`<a>`) *inside* of the list item (`<li>`).
+
+        Example:
+        ```
+        <ul class="social">
+          <li><a href="mailto:me@email.com">me@email.com</a></li>
+          <li><a href="https://twitter.com">Twitter</a></li>
+        </ul>
+        ```
+        Remove the default bullet points and padding with CSS.
+
+        ```
+        .social {
+          list-style-type: none;
+          padding: 0;
+        }
+        ```
+
+        Add some flair with icon fonts! Check out Font Awesome&#39;s Getting Started guide here: <http://fortawesome.github.io/Font-Awesome/get-started/>
+        
+      </script>
+    </section>
+
+    <section id="icons" class="slide" data-markdown>
+      <script type="text/template">
+        ##Create social media links with Icon fonts
+
+        Add icons to your social media accounts and/email like this:
+
+        ![](framework/img/workshop/social-icons-only.png)
+        
+        First, check out Font Awesome&#39;s Getting Started guide here: http://fortawesome.github.io/Font-Awesome/get-started/ to link to the CSS file and to copy the icon HTML & CSS. 
+
+        Example:
+        ```
+        <div class="social-horizontal">
+          <a href="https://twitter.com"><i class="fa fa-twitter" title="Twitter"></i></a>
+          <a href="http://linkedin.com"><i class="fa fa-linkedin" title="LinkedIn"></i></a>
+          <a href="http://instagram.com"><i class="fa fa-instagram" title="Instagram"></i></a>
+          <a href="http://facebook.com"><i class="fa fa-facebook" title="Facebook"></i></a>
+        </div>
+        ```
+
+        ```css
+        /* Social links with only icon fonts */
+        .social-horizontal {
+          text-align: center;
+        }
+        .social-horizontal a {
+          display: inline-block;
+          padding: 20px;
+          margin: 10px;
+        }
+        .social-horizontal i {
+          font-size: 100px;
+        }
+        ```
+      </script>
+    </section>
+
+    <section id="metadata" class="slide" data-markdown>
+      <script type="text/template">
+      ##Metadata
+
+      `<meta>` tags are optional but can provide additional info about the HTML document, using different attributes. The `charset` attribute helps the browser translate computer language (bytes) into characters & symbols and is strongly recommended. Adding a description is also useful for search engine results. 
+
+      Note that the `<meta>` tag does not require a closing tag.
+
+      ```xml
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <title>Page Title</title>
+          <meta charset="utf-8">
+          <meta name="Description" content="Short description about your page">
+        </head>
+        <body>
+          All page content goes here!
+        </body>
+      </html>
+      ```
+
+      More info about meta tags<!-- .element: class="footnote" --> [here](https://support.google.com/webmasters/answer/79812?hl=en).
+      </script>
+    </section>
+
+   <!--  <section id="online" class="slide" data-markdown>
+      <script type="text/template">
+        ##Getting your site online
+
+        You will need to register a domain name (www.mysite.com) and get hosting. Here are a couple domain & hosting suggestions:
+        
+        * [hover.com](http://hover.com/ladiescode)
+        * [dreamhost.com](http://www.dreamhost.com/r.cgi?2085384) - Use coupon code **LLC40** to get $40 off your registration!
+
+        To get your files online, you will need upload your files to your newly purchased hosting server. There are a few pieces of information you will need and are usually provided to you by your hosting service provider.
+
+        * FTP Address
+        * Username
+        * Password
+
+        Here&#39;s a nice tutorial getting your files online using FileZilla: [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29)
+
+        Feeling adventurous? Try [Hosting Static Sites on Github for Beginners](http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/).
+      </script>
+    </section> -->
+  </main><!-- cls main section -->
+
+  <footer>
+    <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.svg" /></a> by <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+    <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
+  </footer>
+  
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="framework/scripts/slideshow.js"></script>
+
+  <!-- Uncomment the plugins you need -->
+  <script src="framework/scripts/plugins/css-edit.js"></script>
+  <script src="framework/scripts/plugins/css-snippets.js"></script>
+  <script src="framework/scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
+
+  <script src="framework/scripts/plugins/markdown/marked.js"></script>
+  <script src="framework/scripts/plugins/markdown/markdown.js"></script>
+  <!-- <script src="framework/scripts/plugins/highlight/highlight.js"></script> -->
+  <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    var slideshow = new SlideShow();
+
+    // Grabs all the .snippet elements
+    var snippets = document.querySelectorAll('.snippet');
+    for(var i=0; i<snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+
+    // Adds "edit me" note to editable code areas
+    jQuery(document).ready(function(){
+      jQuery(".snippet").before("<span class=\"edit\">edit me</span>");
+    });
+  </script>
+</body>
+</html>
