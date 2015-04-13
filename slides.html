@@ -89,7 +89,8 @@
         There are many free and paid options like [Text Wrangler](http://www.barebones.com/products/textwrangler/) or [Atom](https://atom.io).  
         Today, we're going to use [Sublime Text](http://www.sublimetext.com/). 
 
-        Improve your work flow with [keyboard shortcuts](shortcuts-cheatsheet.html).
+        <br>
+        **Pro tip!** Improve your work flow with [keyboard shortcuts](shortcuts-cheatsheet.html).
       </script>
     </section>
 
@@ -213,11 +214,11 @@
       <script type="text/template">
         ##Planning the page layout
 
-        An important part of creating a web page is planning how to structure the page.  Though you will likely make changings as you go along, creating a basic structural layout with *semantic* markup is a good way to start.
+        An important part of creating a web page is planning the page structure.  Though you will likely make changes as you go along, creating a basic layout with *semantic* markup is a good way to start.
 
         If you don't have a design to work from, many developers and designers like to start planning with a simple sketch. But for today, let's take a look at the final design to see how to group related elements and create a page structure.
 
-        There are many *structural HTML tags* that are used just for this purpose.
+        There are many *structural* HTML tags that are used just for this purpose.
 
         ![final design sections](framework/img/workshop/project-final-sections.jpg)
       </script>
@@ -315,26 +316,35 @@
       <script type="text/template">
         ##Paragraphs & Headings
         
-        Every new paragraph, whether it&#39;s one sentence or more, needs its own pair of `<p></p>` tags.
+        **Paragraphs**: whether it&#39;s one sentence or more, each paragraph needs its own pair of `<p></p>` tags.
 
         ```xml
         <p>This is a paragraph.</p>
         ```
         
-        <br>
-        There are six page headings tags ranging from `<h1>` to `<h6>`. Headings are used to describe the *hierarchy* of the page structure. Think about how you would arrange an essay outline.
+        **Headings:** There are six page headings tags ranging from `<h1>` to `<h6>` used to describe the *hierarchy* of the page structure. Think about how you would arrange an essay outline.
 
-          **Title** (`h1`) 
+        <div class="example essay-headings">
+        <p><structurerong>Essay Example Title</strong></p>
+        <ol>
+          <li>Introduction</li>
+          <li>First supporting idea
+            <ul>
+              <li>point 1</li>
+              <li>point 2</li>
+            </ul>
+          </li>
+          <li>Second supporting idea
+            <ul>
+              <li>point 1</li>
+              <li>point 2</li>
+            </ul>
+          </li>
+          <li>Conclusion</li>
+        </ol>
+        </div>
 
-          1. Introduction (`h2`) 
-          1. First supporting idea (`h2`)
-            * point 1 (`h3`)
-            * point 2 (`h3`)
-            * point 3 (`h3`)
-          1. Second supporting idea (`h2`)
-            * point 1 (`h3`)
-            * point 2 (`h3`)
-          1. Conclusion (`h2`)
+        How would we describe this hierarchy using heading tags?
       </script>
     </section>
 
@@ -387,6 +397,8 @@
         ![](framework/img/workshop/exercise-3.png)
 
         Example:<!-- .element: class="footnote" --> [project/examples/basic-html.html](project/examples/basic-html.html)
+
+        **Instructions**
 
         1. Add your name in the `<header>` section if you haven&#39;t already. (Leave the navigation blank for now.)
         1. In the **About** section, add a heading and a couple paragraphs.
@@ -492,7 +504,7 @@
           }
           ```
 
-          **Properties** determine the type of style to be applied to the element (e.g. color). Values are specific to the property (red). The following example below changes the font colour of all paragraphs to red.
+          **Properties:** determine the type of style to be applied to the element (e.g. color). Values are specific to the property (red). The following example below changes the font colour of all paragraphs to red.
 
           ```css
           p {
@@ -588,7 +600,7 @@
       <script type="text/template">
         ##Background images
 
-        The `background` property can be used to add colours or background images. There are two ways to declare the `background` property. The value must inclue the file path to the the image file.
+        The `background` property can be used to add colours or background images. There are two ways to declare the `background` property. The value must include the file path to the image file.
 
         ```css
         /* shorthand */
@@ -625,7 +637,7 @@
           ![](framework/img/workshop/exercise-7.png)
         </div>
 
-        The "box" is only as big as its content, in this case, your name and the image is just set as a background so it does not take up any space. We&#39;ll have to add some space.<!-- .element: class="delayed" -->
+        The "box" is only as big as its content, in this case, your name.  This image is set as a background so it does not take up any space. We&#39;ll have to add some space.<!-- .element: class="delayed" -->
       </script>
     </section>
 
@@ -637,7 +649,7 @@
 
         The browser looks at every HTML element on the page as a rectangular/square box. The **CSS Box Model** describes the way CSS styles the size and spacing of HTML elements.
 
-        There are some funny quirks with the box model sizing.  In short, adding the CSS snippet below to your CSS file will fix those quirks. See more about The Box Model [here](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
+        There are some funny quirks with the box model sizing.  In short, add the snippet below to your CSS file to fix those quirks. See more about The Box Model [here](http://www.paulirish.com/2012/box-sizing-border-box-ftw/).
 
         ```
         /* apply a natural box layout model to all elements, but allowing components to change */
@@ -655,10 +667,12 @@
       <script type="text/template">
         ##Margin and Padding
 
-        `margin` - adds/removes space **outside** of the element  
-        `padding` - adds/removes space **inside** of the element  
+        **margin** - adds/removes space **outside** of the element  
+        **padding** - adds/removes space **inside** of the element  
 
-        The values for both properties can be declared using 1 to 4 values. A variety of measurement units can be used but today we will use pixels. Setting the value to "0" will *remove* any default space and any positive value will *add* space.
+        The values for both properties can be declared using 1 to 4 values. A variety of measurement units (px, %, ems, rems, etc) can be used but today let&#39;s stick to pixels. 
+
+        Setting the value to "0" will *remove* any default space and any positive value will *add* space.
 
         ```css
         padding: 2px 10px 2px 10px; /* top, right, bottom, left */
@@ -709,6 +723,7 @@ margin: 0px;</textarea>
           margin: 0;
         }
         ```
+        Now the background image and other content will run all the way to the edge of the page. 
       </script>
     </section>
 
@@ -726,7 +741,7 @@ margin: 0px;</textarea>
         }
         ```
 
-        Now the background image runs all the way to the edge of the page.  
+         
 
         ![](framework/img/workshop/exercise-8-bgrepeat.jpg)
 
@@ -743,7 +758,7 @@ margin: 0px;</textarea>
 
         ![](framework/img/workshop/exercise-8-bgrepeat.jpg)
 
-        Let's add three more values: `no-repeat`, `fixed` and `cover`.   Let's add this to our project, one value at a time, to see what each one does. Try scrolling and minimizing and maximizing your browser window!
+        More background property values: `no-repeat`, `fixed` and `cover`.   Let&#39;s add this to our project, one value at a time, to see what each one does. Try scrolling and minimizing and maximizing your browser window!
 
         The end code will look like this:
         
@@ -836,7 +851,7 @@ text-transform: lowercase;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Using Google Fonts
+        ##Class Exercise: Using Google Fonts
 
         Services like [Google Fonts](http://www.google.com/fonts) make it easier to add variety to your font choices. Google Fonts allows you to link directly to their hosted files making it available to all users that visit your site.
 
@@ -856,9 +871,10 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
         ##Class Exercise: Typography (continued)
 
-        (Make sure the Google Font stylesheet has been added to your HTML page to use the fonts on website.)<!-- .element: class="footnote" --> 
+        (Make sure the Google Font stylesheet has been added to your HTML page to use the fonts on your webpage.)<!-- .element: class="footnote" --> 
 
-        Let&#39;s add the base font to the `body` element, so all the descendant elements can inherit this style.  You can change the `font-weight` too.
+        Let&#39;s add the base font to the `body` element, so all the descendant elements can inherit this style.  
+        Change the `font-weight` if you want to change it to a thinner or thicker font.
 
         ```
         body {
@@ -995,11 +1011,11 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
           ##Aligning Content
 
-          Notice how the text in the About me section spans the whole width of the browser window? We can restrict the size of it by adding the `width` property.  Eventually, we'd also like to add a background color to it as well.
+          Notice how the text in the About me section spans the whole width of the browser window? We can restrict the size of it by adding the `width` property.
 
           What do you think will happen when both width and background colour is applied to it?
           
-          It won't be quite what we want. It will look something like this:<!-- .element: class="delayed" -->
+          It won&#39;t be quite what we want. It will look something like this:<!-- .element: class="delayed" -->
 
           ![](framework/img/workshop/no-content-wrap.png)<!-- .element: class="delayed" -->
       </script>
@@ -1009,9 +1025,11 @@ text-transform: lowercase;</textarea>
       <script type="text/template">
           ##Aligning Content
 
-          The `margin` property can also be used to center align block level elements. (More about block level elements later). 
+          The `margin` property can also be used to center align block level elements.  
+          <span class="footnote">(More about block level elements later)</span> 
 
-          First, a width needs to be set. Then, setting the left &amp; right values to <code>auto</code> will find the center of the page. The <code>0</code> just refers to the top and bottom value. 
+          First, a width needs to be set.   
+          Then, set the margin values to `margin: 0 auto`. A number for the top & bottom and <code>auto</code> for left & right. This will find the center of the page.  
 
           Let&#39;s try adding `width` and `margin` it below to see the changes.</p>
 
@@ -1087,7 +1105,7 @@ height: 100px;</textarea>
           ![](framework/img/workshop/nav-stlyed.png)
 
           <br>
-          You may have seen, heard about or created site navigation using a list.  Read more about it here:<br> <!-- .element: class="footnote" -->https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/ 
+          You may have seen, heard about or created site navigation using a list.  Read more about it here: https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/ 
       </script>
     </section>
 
@@ -1191,7 +1209,7 @@ height: 100px;</textarea>
 
     <section class="slide" data-markdown>
       <script type="text/template">
-        ##Create a logo (continued)
+        ##Class Exercise: Create a logo (continued)
 
         1. Style the text.  Change the `font-family` and `font-size`. What selector should we use?
           <div class="delayed">
@@ -1201,13 +1219,14 @@ height: 100px;</textarea>
           }
           </pre></code>
           </div>
-        1. Add a border around the initals. Use <!-- .element: class="delayed" -->`border-radius` to make it rounded. 
+        1. Add a <!-- .element: class="delayed" -->`border` around the initals. Use `border-radius` to make it rounded. 
           <div class="delayed">
           <pre><code>border: 2px solid #8c9d87;
           border-radius: 50%;
           </pre></code>
           </div>
-        1. If you want the logo to be a perfect circle, add the same value to height and width. Set padding to 0 to override the padding values set for the other nav links. <!-- .element: class="delayed" -->
+        1. If you want the logo to be a perfect circle, add the same value to height and width.  
+           Then, set padding to 0 to override the padding values set for the other nav links. <!-- .element: class="delayed" -->
           <div class="delayed">
           <pre><code>height: 70px;
           width: 70px;
