@@ -1,0 +1,47 @@
+/* GLOBAL STYLES
+-----------------*/
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background: url(../images/6.jpg) no-repeat fixed;
+  background-size: cover;
+}
+h1 {
+  font-size: 50px;
+  font-family: 'Satisfy', cursive;
+}
+a {
+  color: #8c9d87;
+}
+
+
+/* SHARED STYLES 
+-----------------*/
+nav,
+.about, 
+footer {
+  background: #111;
+  color: #efefef;
+}
+
+
+/* HEADER 
+-----------------*/
+header {
+  background: url(../images/baltimore-rowhouses.jpg) no-repeat fixed;
+  background-size: cover;
+  text-align: center;
+  padding: 150px 0;
+}
+header h1 { 
+  font-size: 150px;
+}
