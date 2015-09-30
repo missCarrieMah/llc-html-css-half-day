@@ -2,7 +2,7 @@
 
 ##Intro to HTML & CSS
 
-3hr introductory workshop.
+4hr introductory workshop.
 
 Created by [Christina Truong](http://twitter.com/christinatruong) for Ladies Learning Code.
 
