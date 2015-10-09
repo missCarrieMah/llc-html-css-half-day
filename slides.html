@@ -241,8 +241,10 @@
           header content here
         </div>
 
-        <div class="about">
-          about content here
+        <div class="main">
+          <div class="about">
+            about content here
+          </div>
         </div>
 
         <div class="extras">
@@ -262,7 +264,7 @@
       <script type="text/template">
         ##HTML5 Structural Elements
 
-        In HTML5, new semantic tags were introduced to better describe blocks of content such as `<header>`, `<footer>`, `<nav>` and `<section>`. Using HTML5 tags, the previous example could look like this instead:
+        In HTML5, new semantic tags were introduced to better describe blocks of content such as `<header>`, `<footer>`, `<nav>`, `<main>`, `<section>` and `<aside>`. Using HTML5 tags, the previous example could look like this instead:
 
         ```xml
         <nav>
@@ -273,13 +275,16 @@
           header content here
         </header>
 
-        <section class="about">
-          about content here
-        </section>
+        <main>
+          <h1>page title here</h1>
+          <section class="about">
+            about content here
+          </section>
+        </main>
 
-        <section class="extras">
+        <aside class="extras">
           extra content here
-        </section>
+        </aside>
 
         <footer>
           footer & contact info here
