@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Ladies Learning Code</title>
+  <link rel="stylesheet" href="framework/css/slideshow.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/fonts.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/highlightjs/github.css" data-noprefix>
+  <link rel="stylesheet" href="framework/css/styles.css" data-noprefix>
+  <link rel="shortcut icon" href="framework/img/favicon.ico">
+
+  <!-- Takes care of CSS3 prefixes -->
+  <script src="framework/scripts/prefixfree.min.js"></script>
+  
+  <!-- opens all links in a new window -->
+  <base target="_blank">
+</head>
+
+<!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
+<body class="en" data-duration="360">
+  <main>
+    <section class="slide welcome highlight">
+      <h1><img class="logo-stacked" src="framework/img/llc-logo-stacked-white.png" alt="Ladies Learning Code logo">Welcome!</h1>
+      
+      <div class="instructions">
+        <!-- ADD WIFI INFO HERE -->
+        <h2>Get Connected</h2>
+        <p><strong>Wifi:</strong> wifi network</p>
+        <p><strong>Password:</strong> wifi password</p>
+        <hr>
+        
+        <h2>Download<br> & Install</h2>
+        <ol class="downloads">
+          <li>Learner files (zip file): <a href="https://github.com/ladieslearningcode/llc-html-css-valentines/archive/master.zip">http://bit.ly/llc-valentines</a>
+            <ul>
+              <li>unzip the learner file (<em>extract all</em> if you’re on a PC)</li>
+              <li>open <em>slides.html</em> in the browser to view the slides</li>
+            </ul>
+          </li>
+          <li>Atom Editor: <a href="http://atom.io">http://atom.io</a></li>
+          <li>Chrome Browser: <a href="https://www.google.ca/chrome/browser/desktop/">https://www.google.ca/chrome</a></li>
+          </li>
+        </ol>
+      </div>
+      <footer>
+        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.png" /></a>
+        <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
+      </footer>
+    </section> 
+    
+    <section class="slide intro">
+      <img class="logo" src="framework/img/llc-logo-white.png" alt="Ladies Learning Code logo">
+      <h1 class="heading-bg">
+        <span>Intro to HTML & CSS Animations:<br>
+        Valentine's Day Edition</span>
+      </h1>
+      
+      <!-- FILL IN INSTRUCTOR DETAILS -->
+      <!-- <img class="instructor" src="http://placehold.it/225x225" alt="Instructor Name">
+      <h2><span class="cursive">with</span> Instructor name</h2>  
+      <ul>
+        <li><a href="mailto:">hello@email.com</a></li>
+        <li><a href="http://website.com">website.com</a></li>
+        <li><a href="http://twitter.com/">@twitter</a></li>
+      </ul> -->
+      
+      <div class="sponsor">
+        <p>In partnership with<br> <img src="framework/img/telus-logo-white.svg" alt="Telus"></p>
+      </div>
+      <footer>
+        <a class="left" rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.png" /></a>
+        <p class="left">Content created by <a href="http://christinatruong.com">Christina Truong</a> for <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
+        <p class="right">Use the left <span class="arrow">&#8592;</span> and right <span class="arrow">&#8594;</span> arrow keys to navigate</p>
+      </footer>
+    </section> 
+    
+    <section class="slide centered">
+      <h1>Today's Project</h1>
+      
+      <p data-height="625" data-theme-id="0" data-slug-hash="KwyGgY" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/KwyGgY/'>KwyGgY</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+      <script async src="http://assets.codepen.io/assets/embed/ei.js"></script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Setting Up Our Dev Tools
+
+        **Browser:** Choose a modern web browser like [Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/) that supports current web standards and has good development tools. 
+
+        **Developer tools** allow us to *inspect* any web page to see how it's built. The tools can be accessed in a few ways:
+        
+        * right-click/ctrl + click on any web page and select **Inspect**
+        * select the menu icon in the top right hand corner of the Chrome browser and select **More Tools > Developer Tools**
+        * keyboard shortcut: **Ctrl + Shift + I** (PC) / **Cmnd + Option + I** (Mac)
+        
+        **Text Editor** - a text editor like [Atom](http://atom.io).
+        
+        ---
+        ###Resources
+        
+        * More about dev tools: http://discover-devtools.codeschool.com
+        * To set Chrome as your default browser, follow [these instructions](https://support.google.com/chrome/answer/95417?hl=en). 
+        * Another good option is Firefox. Visit [browsehappy.com](http://browsehappy.com) for more info about modern browsers.
+      </script>
+    </section> 
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Getting to know Atom
+        
+        Having a good text editor and learning how to use it to its full potential will help your work flow. Today, let's update the text wrapping option in Atom to make it easier to read long blocks of code and text.
+        
+        Go to **Preferences** to open the customization options.
+
+        ![](framework/img/workshop/atom-preferences.jpg)<!-- .element: width="70%" -->
+
+        The **Settings** tab will show by default. Scroll down to **Soft Wrap** option.
+
+        ![](framework/img/workshop/atom-settings.jpg)<!-- .element: width="70%" -->
+          
+        Make sure the **Soft Wrap** option is checked.
+        
+        ![](framework/img/workshop/atom-soft-wrap.jpg)<!-- .element: width="70%" -->
+        
+        ---
+        ###Resources
+        
+        *   [Atom documentation](https://atom.io/docs)
+        *   [Atom Shortcuts cheat sheet](https://bugsnag.com/blog/atom-editor-cheat-sheet)
+        *   [Customizing Atom](https://atom.io/docs/v0.61.0/customizing-atom)
+        *   [Themes](https://atom.io/themes) for Atom
+        *   [Snippets](https://github.com/atom/snippets) - create your own code snippet shortcuts
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Setting Up Our Work Flow
+
+        Inside of the folder you downloaded today, **llc-html-css-valentines-master**, there are a few different folders that contain many files.
+        
+        ```xml
+        llc-html-css-valentines-master
+          |-- framework // Contains files for slide presentation. Do not edit!
+          |-- project // Contains files for your project.
+          |-- slides.html // This is the file you're viewing right now!
+        ```
+      </script>
+    </section> 
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Setting Up Our Work Flow
+                
+        1. Open the **project** folder in the text editor to edit your project.  
+        Go to **File** > ** Add Project Folder**. A popup will appear.
+        
+          ![](framework/img/workshop/editor-add-project-1.jpg)
+          
+          * navigate to the **llc-html-css-valentines-master** folder
+          * select the **project** folder & click **Open**
+          * the files will appear in the sidebar of the editor
+
+        1. Double click on **index.html** in the sidebar to open it in the editor
+        1. Go to Windows Explorer or Finder
+          * navigate to the **project** folder
+          * right-click/two-finger tap on **index.html**
+          * choose **Open With > Chrome**
+          * (double clicking the file will open it in your *default* browser)
+        
+        You should see this in your browser:
+        
+        ![](framework/img/workshop/project-html.png)
+      </script>
+    </section> 
+
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #HTML
+        ##HyperText Markup Language
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #HTML overview
+        
+        What is this extra content that we see in the text editor but not in the browser?  It's HTML!
+
+        HTML was created for web browsers to read and interpret the meaning of the content. 
+        
+        Tags are used to describe the meaning of the content, not what they look like. That's what CSS is for.
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #HTML overview
+
+        To display content in the browser, use *tags*. 
+        
+        Left `<` & `>` right angled brackets surround the tag name. Tags usually come in pairs — an opening tag and a *closing tag*. Note the a forward slash in the closing tag:
+        
+        ```xml
+        <tagname>Content goes between the tags.</tagname>
+        ```
+
+        ##Hint: 
+        * **shift + comma key** for the left angled bracket
+        * **shift + period key** for the right angled bracket
+      </script>
+    </section> 
+        
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #HTML tags: `<title>`
+        
+        Here are some tags already included in your project's **index.html**.
+
+        ##Title
+        
+        * found in the `<head>` section of the HTML document
+        * used for defining the page title
+        * displays in the browser's tab, search engine results and bookmarks.
+        
+        ```xml
+        <title>Page Title</title>
+        ```
+        ```xml
+        <title>Valentine's Day Love Bomb!</title>
+        ```
+      </script>
+    </section> 
+        
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #HTML tags: Headings & Paragraphs
+        
+        ##Headings
+        * there are 6 heading tags (`<h1>,<h2>,...,<h6>`)
+        * follows a hierarchical structure 
+
+        ```xml
+        <h1>Most Important Heading</h1>
+        <h2>Second Most Important Heading</h2>
+        ```
+
+        ##Paragraphs
+        * Created with the `<p></p>` tags.
+        
+        ```xml
+        <p>I'm a paragraph.</p>
+        ```
+      </script>
+    </section> 
+        
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #HTML tags: `<blockquote>`
+        
+        ##Block Quotation
+        * created with the `<blockquote></blockquote>` tags
+        * used to indicate that the enclosed text is a quotation
+        * a source of the quotation may be given using the `<cite>` tag
+
+        ```xml
+        <blockquote>
+          <p>You know you're in love when you can't fall asleep because reality is finally better 
+          than your dreams.</p>
+          <cite>&#x2015; Dr. Seuss</cite>
+        </blockquote>
+        ```
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #More HTML tags
+
+        Here are a couple other tags you may choose to add today.
+
+        **Link**: requires an `href` *attribute* to specify where to link to.
+        
+        ```
+        <a href="http://website.com">link</a>
+        ```
+
+        **Images**: like links, also requires an additional attribute, `src`, for linking to the image file and `alt` to provide alternative text for accessibility.
+
+        ```
+        <img src="director/image-file.jpg" alt="alternative text">
+        ```
+        
+        ---
+        ###Resources
+        * [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/)
+        * [HMTL5Doctor](http://html5doctor.com/element-index/) 
+      </script>
+    </section>
+        
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Exercise #1: Personalize the content (15 mins)
+        
+        Right now, we'll stick to viewing the project with the default HTML styles. Later, we'll be using CSS to change colours, sizing, fonts, etc. So let's not stray away from the current layout too much (for now).
+
+        1. Update the `h1` and `h2` content.
+        2. Update the paragraph. Feel free to add a couple more!
+        3. You can update the quote but ensure that the `blockquote` tag is still being used.
+
+        Don't know what to say yet? Add some placeholder content: 
+         
+        * http://meettheipsums.com
+        * https://www.goodreads.com/quotes
+      </script>
+    </section> 
+
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #CSS
+        ##Cascading Style Sheets
+      </script>
+    </section> 
+        
+    <section class="slide highlight" data-markdown>
+      <script type="text/template">
+        #Intro to CSS
+
+        HTML contains some default styles attached to various HTML tags, such as bolded text for headings or spaces between paragraphs.
+        
+        But HTML should be used to define the *meaning* of the *content*. 
+        
+        CSS defines the *presentation* and is the language used to make your HTML look any way you want!
+        
+      </script>
+    </section> 
+        
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #CSS Syntax & Terminology
+
+        **Selectors** determine which element(s) to apply the styles to.  
+        
+        **Declarations** are the style rules, written using `property:value` pairs.  Also contained within a pair curly braces `{}`.
+
+        ```css
+        selector {
+          property: value;
+        }
+        ```
+      </script>
+    </section> 
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #CSS Syntax & Terminology
+
+        **Properties** determine the type of style to be applied to
+        the element (e.g. color) and followed by a colon `:` symbol.  
+        
+        **Values** are specific to the property and must end with a semi-colon `;` symbol to indicate the instruction is done.  
+
+        ```css
+        selector {
+          property: value;
+        }
+        ```
+        ```css
+        h1 {
+          font-size: 40px;
+        }
+        ```
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Comments
+        
+        Comments are great for leaving notes, organizing code blocks or for "commenting" out code (hiding it for later). Note they syntax below:
+        
+        ```
+        p {
+          color: #B109AA; /* LLC purple */
+        }
+        /* HEADER STYLES */
+        header {
+          width: 80%;
+        }
+        /*  Saving this for later
+        .slider {
+          width: 100px;
+          background: red;
+        }
+        */ 
+        ``` 
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Where Does the CSS Go?
+
+        CSS can be added to a web page in many ways. Today we'll use a linked/external style sheet.
+
+        Referenced in the `<head>`, use a `<link>` tag and two **attributes**, `rel` and `href`. The value of the `href` is the location of the style sheet in your folder structure.
+
+        ```
+        <head>
+          <title>Page Title</title>
+          <meta charset="utf-8">
+          <link rel="stylesheet" href="style.css">
+        </head>
+        ```
+      </script>
+    </section> 
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class exercise: Add the CSS file
+        
+        There's a `styles.css` file in your project folder, containing some base CSS styles.
+        
+        Let's link the CSS file to the HTML page and see what those base styles look like on the page.
+
+        **Pro tip!**   
+        Here's a shortcut. In the editor type "link" + tab key. Ta da!
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class exercise: Choosing Web Fonts
+        
+        Services like [Google Fonts](http://www.google.com/fonts/) make it easier to use a variety of fonts by allowing you to link directly to their stylesheet! To use these fonts:
+        
+        1. Go to [Google Fonts](http://www.google.com/fonts).
+        1. **Add to Collection** to select a font.
+          * The LLC example project uses Sacramento (cursive) & Lato (sans-serif)
+          * (You can change your selections in an upcoming exercise.)
+        1. **Review** to compare. 
+        1. Select **Use** to get the code.
+        1. Select font weights.
+          * The more you choose, the more it will slow down page load time.
+          * The LLC project uses Sacramento, regular and Lato light 300.
+          * The default character set should contain what you need.
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class exercise: Adding Web Fonts
+          
+        Copy the `<link>` code snippet and add it the `<head>` of your page, before your **styles.css**, to reference the Google Font CSS.
+          
+        ```
+        <head>
+          <meta charset="UTF-8">
+          <title>Love Bomb!</title>
+          <link href='https://fonts.googleapis.com/css?family=Sacramento|Lato:300' rel='stylesheet' type='text/css'>
+          <link rel="stylesheet" href="styles.css">
+        </head>
+        ```
+        
+        Now you're ready to use the new fonts! 
+        Use the font-family name listed in the Google Fonts page.
+        
+        ```
+        font-family: 'Sacramento', cursive;
+        font-family: 'Lato', sans-serif;
+        ```
+      </script>
+    </section>
+    
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #CSS Selectors
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Inheritance and Specificity
+
+        A strength of CSS is styles can be inherited from parent to child elements. Nested HTML elements create a family tree structure.
+        
+        ```
+        <body><!-- parent of h1 and p -->
+          <h1>My Website</h1><!-- child of body, sibling of p -->
+          <p>This is a paragraph.</p><!-- child of body, sibling of h1 -->
+        </body>
+        
+        ```
+        
+        CSS properties in the body selector is inherited by the descendant elements. A more specific selector will override the inherited values.
+        
+        ```
+        body {
+          color: #222222;
+        }
+        h1 {
+          color: blue; /* overrides the inherited style */
+        }
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Type & Descendant Selectors
+
+        Type selectors select HTML elements by using the tag name.
+
+        ```css
+        p {
+          /* styles all paragraphs on the page */  
+        }
+        ```
+
+        Descendant selectors target any child/descendant elements.   
+        Note the space *in between* each selector.
+
+        ```css
+        p a {
+          /* styles only links inside of paragraphs */
+        }
+        ```
+      </script>
+    </section> 
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class exercise: Add typography styles
+
+        In **styles.css**, let's add a base font for the page and a specific font fonts for the main heading and quote.
+
+        1. Add the **Lato** font to `body` so the nested elements *inherit* the styles.
+        
+        1. Add the **Sacramento** font to only the `h1`.
+        
+        1. Add the **Sacramento** font to only the paragraph in the `blockquote`.
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Exercise review 
+        
+        Here's what was added:
+        
+        ```
+        body {
+          font-family: 'Lato', sans-serif;
+        }
+        h1 {
+          font-family: 'Sacramento', cursive;
+        }
+        blockquote p {
+          font-family: 'Sacramento', cursive;
+        }
+        ```
+      </script>
+    </section> 
+    
+    <section class="slide">
+      <h1>Font Styles & Typography</h1>
+      <p>Before we go back to the css file, let's experiment with a few CSS properties by changing some of the values below.</p>
+      <textarea class="snippet" data-subject="#typography-example">line-height: 1.25;
+font-family: Helvetica, Arial, serif;
+font-size: 18px;
+font-weight: normal;
+text-transform: none;
+color: #222222;</textarea>
+      <div id="typography-example" class="example">
+          <p>Just some text to test out the above styles. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repellat sunt quae fugit illum in aut sed, quis nesciunt totam veritatis, dolores alias modi fuga commodi dicta facilis, consequatur temporibus.</p>
+      </div>
+
+      <p class="note">Resources: <a href="http://www.htmldog.com/guides/css/beginner/text/">Text CSS properties reference</a>, <a href="http://csstypeset.com/">http://csstypeset.com</a></p>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        # Exercise #2: Personalize the Typography (15mins)
+        
+        1. (Optional) Find two font families from [Google Fonts](http://www.google.com/fonts/).
+        1. Update the `font-size` and `line-height` to your liking. Example:
+          ```css
+          h1 {
+            font-size: 50px;
+            line-height: 1;
+          }
+          blockquote p {
+            font-size: 32px;
+          }
+          ```
+        1. Change the font colours using the `color` property!  Note that this property accepts three types of values: keyword, hex or RBG. The example below is all the same colour. 
+          ```css
+          h1 {
+            color: tan;
+            color: #D2B48C;
+            color: rgb(210,180,140);
+          }
+          ```
+          
+        Here's a great colour resource: http://colours.neilorangepeel.com/
+      </script>
+    </section> 
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Unicodes
+
+        We can add icons to our page without using images! Select a shape from [here](http://unicode-table.com/en/#2665) and choose either **Copy to clipboard** or the HTML code.
+
+        ![](http://cl.ly/image/0h1i1q1j0Q2E/Image%202015-02-09%20at%205.13.38%20PM.png)
+      </script>
+    </section> 
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise: Unicodes
+        Let's add it using a `span` tag. It can be included on it's own or within a paragraph.
+
+        ```xml
+        <span>&#9829;</span>
+        ```
+        ```xml
+        <p>This goes out to all the volunteers, mentors, instructors and learners across the country. Thanks for making LLC so awesome! Happy Valentine's Day! <span>&#9829;</span></p>
+        ```
+        
+        Though these may look like images, they are actually text and you can applying typography based CSS to it. 
+      </script>
+    </section> 
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class attributes
+        
+        When **type selectors** are too general (targeting the HTML element), use a `class` **attributes** to attach extra identifying information.  Use a leading period in the CSS to select it.
+
+        ``` 
+        span { /* targets ALL span elements */
+          color: blue;
+        }
+        .heart-pulse { /* only applies to the element that contains this class */
+          color: red;
+        }
+        ```
+
+        ```xml   
+        <span>&#9829;</span>
+        <p>This goes out to all the volunteers, mentors, instructors and learners across the country. Thanks for making LLC so awesome! Happy Valentine's Day! <span class="heart-pulse">&#9829;</span></p>
+        ```
+      </script>
+    </section>
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise: Use a class
+        
+        Add the class of `.heart-pulse` to the heart icon.
+        
+        ```xml   
+        <p>This goes out to all the volunteers, mentors, instructors and learners across the country. Thanks for making LLC so awesome! Happy Valentine's Day! <span class="heart-pulse">&#9829;</span></p>
+        ```
+        
+        In the CSS, try changing the color. 
+        
+        ```
+        .heart-pulse {
+          color: #B109AA; /* LLC purple */
+        }
+        ```
+        Now let's animate it, to make it look like it's pulsing!
+      </script>
+    </section>
+        
+    <section class="slide title" data-markdown>
+      <script type="text/template">
+        #CSS3 Animations!
+        
+        ##<span class="heart-pulse">&#9829;</span>
+        
+        <span class="heart-falling">&#9829;</span>
+        <span class="heart-falling">&#9829;</span>
+        <span class="heart-falling">&#9829;</span>
+        <span class="heart-falling">&#9829;</span>
+        <span class="heart-falling">&#9829;</span>
+        <span class="heart-falling">&#9829;</span>
+      </script>
+    </section>
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #CSS3 @keyframes
+
+        To make a heart pulse effect, we need to tell the browser, "Make this element bigger, then smaller, then bigger, then smaller..."
+
+        Use the `@keyframes` rule to apply time-based styles. Declare an animation name and breakpoints where the properties will be animated. 
+        
+        To create different breakpoints, use percentages (0% refers to the beginning of the animation, 100% is the end of an animation).
+        
+        ```css
+        @keyframes animation-name {
+          0% {  /* start */
+            width: 10px;
+          }
+          100% { /* end */
+            width: 100px;
+          }
+        }
+        ```
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise: CSS3 Transform
+
+        The `transform` property can be used to add many effects like `skew`, `rotate` and [many more](http://learn.shayhowe.com/advanced-html-css/transitions-animations/).  
+        
+        Today we'll use `scale` to create a pulsing heart effect. 
+        
+        ```css
+        @keyframes pulse {
+          0% { /* starts at half of its size */
+            transform: scale(0.5);
+          }
+          100% { /* scales to its full size */
+            transform: scale(1);
+          }
+        }
+        ```
+      </script>
+    </section> 
+            
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Using the @keyframe animation
+
+        The `@keyframes` rule just *creates* the animation. To use it, it must be assigned to an element using the *animation name*.  Also, add a *duration*, so the browser knows how long an animation should take.
+        
+        ```
+        .heart-pulse {
+          animation-name: pulse;
+          animation-duration: 2s;
+        }
+        ```
+        This can also be written in shorthand.
+        
+        ```
+        .heart-pulse {
+          animation: pulse 2s;
+        }
+        ```
+      </script>
+    </section> 
+            
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Using the @keyframe animation
+        
+        By default, animations run *once* from beginning to end. To repeat an animation, use the `animation-iteration-count` property with a number value or `infinite` to repeat the animation indefinitely.
+        
+        ```
+        .heart-pulse {
+          animation-name: pulse;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+        }
+        ```
+        Here it is in shorthand.
+        
+        ```
+        .heart-pulse {
+            animation: pulse 2s infinite;
+        }
+        ```
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise: Pulsing heart
+
+        Let's put this all together and apply this effect to `.heart-pulse`.  
+        
+        ```xml
+        <span class="heart-pulse">&#9829;</span>
+        ```
+        
+        Because the heart is in a `span` tag, we'll need to add an additional property, `display`, to get it to apply the sizing properly.  See the resource below for more info.
+        
+
+        ```css
+        .heart-pulse {
+          animation: pulse 2s infinite;
+          display: inline-block;
+        }
+
+        @keyframes pulse {
+          0% {
+            transform: scale(0.5);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+        ```
+        ###Resource: More about [display](https://css-tricks.com/almanac/properties/d/display/).
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise: More Breakpoints
+
+        Yay! It works! But... it's kind of "jumpy".  Remember, we want to make the element bigger, then smaller, then bigger, then smaller...
+        
+        Add a half-way point. Update the CSS. Feel free to revise & experiment with your scale values too!
+
+        ```css
+        @keyframes pulse {
+          0% { /* starts small */
+            transform: scale(0.5);
+          }
+          50% { /* halfway point - gets bigger */
+            transform: scale(1);
+          }
+          100% { /* end - goes back to starting size */
+            transform: scale(0.5);
+          }
+        }
+        ```
+        
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Important!
+        
+        Animations can include multiple properties but the animation can only be applied to the *same* property, **not** from one property to another. 
+        
+        For example, animating from `top: 0;` to `bottom: 0;` will not work.  
+        
+        It must be from `top: 0;` to `top: 200px` or any other desired value but using the same property.
+        
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise: Falling, Rotating Hearts - Step 1
+
+        Let's take this animation stuff a little bit further and create some falling, rotating hearts. 
+        
+        Add a bunch of hearts to the page and give it a class of `heart-falling`. Let's add it right under the `<main>` tag.
+        
+        ```xml
+        <main>
+          <span class="heart-falling">&#9829;</span>
+          <span class="heart-falling">&#9829;</span>
+          <span class="heart-falling">&#9829;</span>
+          <span class="heart-falling">&#9829;</span>
+          <span class="heart-falling">&#9829;</span>
+          <span class="heart-falling">&#9829;</span>
+          
+          ...
+        </main>
+        ```
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Position and :nth-of-type
+
+        Next, we'll use the CSS `position` property to make the hearts appear to be moving from top to bottom at different heights. 
+        
+        We'll also be using *psuedo-class*, `:nth-of-type` to select specific hearts.
+        
+        ---
+        These are more advanced CSS concepts that require a bit more discussion. For today, we'll provide the code for you to experiment with but you can see more info about `position` [here](http://www.cssnewbie.com/all-about-css-positioning/) and `:nth-of-type` [here](https://css-tricks.com/almanac/selectors/n/nth-of-type/).
+      </script>
+    </section> 
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise: Falling, Rotating Hearts - Step 2
+        
+        Add `position: absolute;` to the `.heart-falling` class. 
+        
+        This will make it possible to move the hearts from top to bottom, regardless of where it is in the HTML.
+        
+        ```
+        .heart-falling {
+          position: absolute;
+        }
+        ```
+      </script>
+    </section> 
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise: Falling, Rotating Hearts - Step 3
+      
+        Now, let's use `left` and `bottom` to position each heart to a different spot on the page or else they'll just stack on top of each other.
+        
+        Remember, we can't say "top to bottom" so we'll animate just the `bottom` property.  
+        
+        `.heart-falling:nth-of-type(1)` selects the first heart, `.heart-falling:nth-of-type(2)` selects the second and so on.
+        
+      </script>
+    </section> 
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Class Exercise: Falling, Rotating Hearts - Step 3
+        
+        ```
+        .heart-falling:nth-of-type(1) {
+          bottom: 1200px;
+          left: 2%;
+        }
+        .heart-falling:nth-of-type(2) {
+          bottom: 500px;
+          left: 15%;
+        }
+        ...
+        ```
+        Some hearts may appear to be "off screen" but that's okay.  The value is just larger than the height of your browser window.  It will re-appear when the animation is applied.
+        
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Class Exercise: Falling, Rotating Hearts - Step 4
+      
+      Create a @keyframe animation to move the hearts from the top to bottom.  At then *end* of the animation, use a negative bottom value to make the hearts appear to go offscreen. 
+      
+      (Rotate animation to be added.)
+      
+      ```css
+      @keyframes falling {
+        0% {
+
+        }
+        50% {
+
+        }
+        100% {
+          bottom: -25px;
+        }
+      }
+      ```
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Class Exercise: Falling, Rotating Hearts - Step 5
+      
+      Apply the animation to the falling hearts class.
+      
+      ```xml
+      <span class="heart-falling">&#9829;</span>
+      <span class="heart-falling">&#9829;</span>
+      <!-- ... add more spans to add more hearts! -->
+      ```
+      
+      ```css
+      .heart-falling {
+        position: absolute;
+        animation: falling 6s infinite linear;
+      }
+      ```
+      </script>
+    </section> 
+    
+    <section class="slide" data-markdown>
+      <script type="text/template">
+      #Class Exercise: Falling, Rotating Hearts - Step 5
+      
+      Add the below `transform: rotate()` property to rotate the hearts, using degrees.
+      
+      ```css
+      @keyframes falling {
+        0% {
+          transform: rotate(360deg);
+        }
+        50% {
+          transform: rotate(0deg);
+        }
+        100% {
+          bottom: -25px;
+          transform: rotate(-360deg);
+        }
+      }
+      ```
+      </script>
+    </section> 
+
+    <section class="slide" data-markdown>
+      <script type="text/template">
+        #Hackathon!
+
+        There's so much more you can do! View the Ladies Learning Code version on [CodePen](index.html#slide3) or in your project folders for inspiration or ask your mentors or Google!
+        
+        Here are some suggestions:
+        
+        1. Add your card to [Codepen](http://codepen.io), to be able to share your card online
+        1. Use icon fonts for more options that just unicode.
+        Add a "bomb" to your love bomb card using [Font Awesome](http://fortawesome.github.io/Font-Awesome/icon/bomb/).
+        1. Adjust the colours and size of your hearts or add some more icons.
+      </script>
+    </section> 
+
+    <!-- Last slide -->
+    <section class="slide last">
+      <h1>Thank you!</h1>
+      <h2 class="heading-bg">
+        <span>Intro to HTML & CSS Animations<br>
+        Valentine's Day Edition</span>
+      </h2>  
+
+      <img class="instructor" src="http://cl.ly/image/0r3Q3H110G36/profile-generic.jpg" alt="instructor name">
+      <h2><span class="cursive">with</span> Instructor Name</h2>
+      <ul>
+        <li><a href="mailto:">hello@email.com</a></li>
+        <li><a href="#">mywebsite.com</a></li>
+        <li><a href="http://twitter.com/">@twitter</a></li>
+      </ul>
+
+      <p class="attribution">Slide presentation created by <a href="http://christinatruong.com">Christina Truong</a> based on <a href="https://github.com/LeaVerou/csss">Lea Verou's SlideShow</a> and <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>.</p>
+      </script>
+</section> 
+
+  </main><!-- cls main section -->
+  
+  <script src="framework/scripts/jquery-1.11.0.min.js"></script>
+  <script src="framework/scripts/slideshow.js"></script>
+
+  <!-- Uncomment the plugins you need -->
+  <script src="framework/scripts/plugins/css-edit.js"></script>
+  <script src="framework/scripts/plugins/css-snippets.js"></script>
+  <script src="framework/scripts/plugins/css-controls.js"></script>
+  <!-- <script src="plugins/code-highlight.js"></script>-->
+
+  <script src="framework/scripts/plugins/markdown/marked.js"></script>
+  <script src="framework/scripts/plugins/markdown/markdown.js"></script>
+  <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="framework/scripts/llc.js"></script>
+  <script>
+    var slideshow = new SlideShow();
+
+    // Grabs all the .snippet elements
+    var snippets = document.querySelectorAll('.snippet');
+    for(var i=0; i<snippets.length; i++) {
+      new CSSSnippet(snippets[i]);
+    }
+  </script>
+</body>
+</html>
