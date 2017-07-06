@@ -1,3 +1,35 @@
+HTML: HYPERTEXT MARKUP LANGUAGE
+- We use HTML to communicate with our browsers
+- When we use HTML, we are telling our browser information 
+  about our web page and what kind of content to display
+- HTML is made up of elements
+
+SETTING UP A BASIC HTML FILE
+- Always open <> and close </> each tag so your computer can understand you
+<html> - we're going to start communicating with you using HTML
+<head> - information about our web page starts here
+<head> - information about our web page stops here
+<body> - our content starts here, browser. Pay attention!
+</body> - our content stops here
+</html> - our HTML commmunication with you is over
+
+CSS: CASCADING STYLE SHEETS
+- CSS is our way of making our HTML look pretty
+- An easy way to remember the difference is that HTML handles
+  the content and CSS handles the design
+- Remember the <body></body> tags we created in HTML? CSS must go
+  somewhere in between those two tags
+- To tell the browser that we are going to use CSS we use the <style> tag
+- To tell the browser we are going to stop using CSS we use the </style> tag
+
+GLOSSARY
+hex code - A 6 digit number that translates into a colour
+div - HTML has a neat little tag to organize our code
+id - reference to a thing that can only be seen once on a web page
+class - reference to things that occur more than once on a web page
+
+==================================================================================================================
+
 A list of important HTML elements:
 
 <element></element> - description/name of element
